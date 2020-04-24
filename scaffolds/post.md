@@ -1,7 +1,9 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
+author:
 excerpt:
 thumbnail:
+tags:
+toc: true
 ---
