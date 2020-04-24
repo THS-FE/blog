@@ -101,4 +101,4 @@ deploy:
   type: git
   repo: https://github.com/THS-FE/ths-fe.github.io.git
   branch: master
-  message: fix comments error
+  message: 添加资源引用说明
