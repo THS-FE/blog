@@ -1,0 +1,24 @@
+sidebar:
+    # Left sidebar configurations
+    left:
+        # Whether the sidebar sticks to the top when page scrolls
+        sticky: true
+    # Right sidebar configurations
+    right:
+        # Whether the sidebar sticks to the top when page scrolls
+        sticky: false
+widgets:
+    # Table of contents widget configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: left
+        type: toc
+    # Google AdSense unit configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: left
+        type: adsense
+        # AdSense client ID
+        client_id: ca-pub-6826040978803389
+        # AdSense AD unit ID
+        slot_id: abc
