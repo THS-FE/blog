@@ -119,18 +119,10 @@ search:
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
     type: valine
-    app_id: YvmkGuyBYMyAYXmnNLBolfIi-gzGzoHsz
-    app_key: HeLtFRPlWwTvU0ruhBtDcV6F
-    placeholder:                    # 可选填
-    notify: false                   # 可选填
-    verify: false                   # 可选填
-    avatar:                         # 可选填
-    avatar_force: false             # 可选填
-    meta: ["昵称", "邮件", "网址"]  # 可选填
-    page_size: 10                   # 可选填
-    visitor: false                  # 可选填
-    highlight: true                 # 可选填
-    record_ip: false                # 可选填
+    app_id: 4o5OfjCIGaSyqIwg7jop80Ge-gzGzoHsz
+    app_key: Rj9jcPLhW8WgWd6bDmXGmKaA
+    placeholder: 欢迎评论交流          # 可选填
+    visitor: true // 阅读量统计
     # type: utterances
     # repo: THS-FE/ths-fe.github.io
     # issue_term: pathname        # 必填项，与issue_number二选一填写

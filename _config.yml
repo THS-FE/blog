@@ -101,4 +101,4 @@ deploy:
   type: git
   repo: https://github.com/THS-FE/ths-fe.github.io.git
   branch: master
-  message: 添加部署出错解决方案
+  message: 修改评论为Valine
