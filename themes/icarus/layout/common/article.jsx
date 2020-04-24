@@ -33,6 +33,7 @@ module.exports = class extends Component {
                     {index ? <a href={url_for(page.link || page.path)} class="image is-7by3">
                         <img class="thumbnail" src={get_thumbnail(page)} alt={page.title || get_thumbnail(page)} />
                     </a> : <span class="image is-7by3">
+                            <img class="thumbnail" src={get_thumbnail(page)} alt={page.title || get_thumbnail(page)} />
                         </span>}
                 </div> : null}
                 {/* Metadata */}
