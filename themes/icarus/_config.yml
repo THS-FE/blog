@@ -73,8 +73,9 @@ head:
 navbar:
     # Naviagtion menu items
     menu:
-        首页: /
-        # 归档: /archives
+        博客: /
+        大前端技术体系: /fe
+        归档: /archives
         # 分类: /categories
         # 标签: /tags
         关于我们: /about
@@ -122,7 +123,6 @@ comment:
     app_id: 4o5OfjCIGaSyqIwg7jop80Ge-gzGzoHsz
     app_key: Rj9jcPLhW8WgWd6bDmXGmKaA
     placeholder: 欢迎评论交流          # 可选填
-    visitor: true // 阅读量统计
     # type: utterances
     # repo: THS-FE/ths-fe.github.io
     # issue_term: pathname        # 必填项，与issue_number二选一填写
