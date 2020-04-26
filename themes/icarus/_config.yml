@@ -191,7 +191,7 @@ widgets:
         # Author's current location
         location: 北京 深圳 成都 西安
         # URL or path to the avatar image
-        avatar: http://www.ths.com.cn/sysweb/portal/default/main/common/images/1.jpg
+        avatar: /img/fe.png
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
