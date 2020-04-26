@@ -101,4 +101,4 @@ deploy:
   type: git
   repo: https://github.com/THS-FE/ths-fe.github.io.git
   branch: master
-  message: 修改评论为Valine
+  message: 修复共享功能和图片显示，给页面添加目录。
