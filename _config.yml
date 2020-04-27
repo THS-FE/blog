@@ -101,4 +101,4 @@ deploy:
   type: git
   repo: https://github.com/THS-FE/ths-fe.github.io.git
   branch: master
-  message: 更换logo，默认给post、draft添加上目录，发HTTP请求方法的异同
+  message: 修改HTTP文章的语句
