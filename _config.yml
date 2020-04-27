@@ -101,4 +101,4 @@ deploy:
   type: git
   repo: https://github.com/THS-FE/ths-fe.github.io.git
   branch: master
-  message: 修改HTTP文章的语句
+  message: 添加文章链接
