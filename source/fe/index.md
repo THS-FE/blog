@@ -5,7 +5,7 @@ toc: true
 ---
 ## 核心
 ---
-### JavaScript
+### [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
 - ✅ [编码规范](https://github.com/lin-123/javascript)   thanks to airbnb 😂 
 - ⬜ JavaScript简介
 - ⬜ 变量提升(Variable Hoisting)、事件冒泡(Event Bubbling)、严格模式(Strict)
@@ -83,7 +83,7 @@ toc: true
 ---
 - ⬜ OSI模型
 - ⬜ DNS
-- ⬜ HTTP
+- ⬜ [HTTP请求方法的异同](/2020/04/26/HTTP请求方法的异同/)  <font color='grey' size='1rem'>天下布武</font>
 - ⬜ HTTPS
 - ⬜ 端口
 - ⬜ URI 🆚 UDP
