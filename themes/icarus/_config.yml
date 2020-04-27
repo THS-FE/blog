@@ -75,6 +75,7 @@ navbar:
     menu:
         博客: /
         大前端技术体系: /fe
+        GIS技术体系: /gis
         归档: /archives
         # 分类: /categories
         # 标签: /tags
