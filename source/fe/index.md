@@ -5,7 +5,7 @@ toc: true
 ---
 ## 核心
 ---
-### [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
+### 网页行为：[JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
 - ✅ [编码规范](https://github.com/lin-123/javascript)   thanks to airbnb 😂 
 - ⬜ JavaScript简介
 - ⬜ 变量提升(Variable Hoisting)、事件冒泡(Event Bubbling)、严格模式(Strict)
@@ -19,6 +19,7 @@ toc: true
 - ⬜ 模块化(Module)
 - ⬜ 事件循环(Event Loop)
 - ⬜ 正则表达式(Regular expressions)
+- ⬜ Web API(CustomEvent、WebSockets、Web Workers.etc)
 
 #### ES5-
 #### ES6+
@@ -37,17 +38,17 @@ toc: true
 - ⬜ 装饰器
 - ⬜ 声明文件
 
-### CSS
+### 网页样式：CSS
 - ⬜ CSS编码规范 刘燕
 - ⬜ CSS实战
 - ⬜ BEM
 - ⬜ 响应式和媒体查询
 - ⬜ Sass编码规范 刘燕
 
-### HTML
+### 网页结构：HTML
 - ⬜ 编码规范 刘燕
 - ⬜ HTML简介
-- ⬜ HTML5特性  
+- ⬜ HTML5特性
 
 ## 概念
 ---
@@ -57,8 +58,9 @@ toc: true
 - ⬜ 形参 🆚 实参，转译 🆚 编译，IDE 🆚 编辑器
 - ⬜ 语法糖 🆚 语法盐，造轮子 🆚 发明轮子，脚手架，银弹
 - ⬜ shim 🆚 polyfill，库 🆚 框架, 方法 🆚 函数
-- ⬜ URI 🆚 URL 🆚 URN
-- ⬜ 进程 🆚 线程
+- ⬜ URI 🆚 URL 🆚 URN  BOM 🆚 DOM
+- ⬜ 进程 🆚 线程  对称加密 🆚 非对称加密
+- ⬜ 逻辑像素 🆚 物理像素 rem 🆚 em  pt 🆚 dp 
 - ⬜ Session Storage 🆚 Local Storage
 - ⬜ 标准化组织
 
@@ -77,13 +79,14 @@ toc: true
 - ⬜ 蓝湖
 - ⬜ Fiddler
 - ⬜ Chrome DevTools
+- ⬜ PostWoman
 - ⬜ RAP2
 
 ## 协议相关
 ---
 - ⬜ OSI模型
 - ⬜ DNS
-- ⬜ [HTTP请求方法的异同](/2020/04/26/HTTP请求方法的异同/)  <font color='grey' size='1rem'>天下布武</font>
+- ✅ [HTTP请求方法的异同](/2020/04/26/HTTP请求方法的异同/)  <font color='grey' size='1rem'>天下布武</font>
 - ⬜ HTTPS
 - ⬜ 端口
 - ⬜ URI 🆚 UDP
@@ -123,7 +126,6 @@ toc: true
 - ⬜ Cordova
 - ⬜ Electron
 - ⬜ Flutter？
-- ⬜ WebSocket
 - ⬜ Service Worker
 
 
@@ -132,11 +134,16 @@ toc: true
 - ⬜ nginx使用
 - ⬜ Tomcat
 - ⬜ IIS添加HTTPS
-- ⬜ NPM
-- ⬜ Nest.js
 - ⬜ Redis
 - ⬜ RabbitMQ
 - ⬜ CentOS
+
+### Node.js
+- ⬜ NPM
+- ⬜ Nest.js
+- ⬜ mongoose
+- ⬜ socket.io
+
 
 ## 数据库
 ---
