@@ -101,4 +101,4 @@ deploy:
   type: git
   repo: https://github.com/THS-FE/ths-fe.github.io.git
   branch: master
-  message: 添加文章链接
+  message: 修改toc最大高度为600px，完善post模板，添加Vue最佳实践文章

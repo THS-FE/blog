@@ -5,6 +5,7 @@ date: 2020-04-27 13:50:06
 ---
 
 ## 概念
+
 - ⬜ 地理坐标系
 - ⬜ 插值
 - ⬜ WebGL
@@ -15,7 +16,6 @@ date: 2020-04-27 13:50:06
 - ⬜ 旋转、跳跃，我闭着眼
 - ⬜ 粒子系统
 - ⬜ 着色器
-
 
 ## 桌面软件
 
@@ -30,19 +30,23 @@ date: 2020-04-27 13:50:06
 ### [GeoServer](http://geoserver.org/)
 
 ## 数据库
+
 ### [PostGIS](http://www.postgis.org/)
 
 ## 工具库
+
 ### Arcpy
 
 ### GDAL
 
 ## 2D Map库
+
 ### ArcGIS API for JavaScript
 
 ### Turf
 
 ## 3D Map库
+
 ### three.js
 
 ### Cesium
