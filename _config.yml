@@ -101,4 +101,4 @@ deploy:
   type: git
   repo: https://github.com/THS-FE/ths-fe.github.io.git
   branch: master
-  message: add author's link
+  message: add visitor count
