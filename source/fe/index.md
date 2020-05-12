@@ -1,5 +1,7 @@
 ---
 title: 大前端技术体系
+author: 思路大前端团队
+authorLink: https://ths-fe.github.io/
 date: 2020-04-24 17:37:22
 toc: true
 ---

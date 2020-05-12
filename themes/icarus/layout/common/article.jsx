@@ -77,6 +77,21 @@ module.exports = class extends Component {
                     </h1>
                     {/* Content/Excerpt */}
                     <div class="content" dangerouslySetInnerHTML={{ __html: index && page.excerpt ? page.excerpt : page.content }}></div>
+                    {/* Copyright */}
+                    {!index ?
+                        <div style="font-size: 1rem;letter-spacing: .02rem;word-break: break-all;margin: 2.5rem 0 0;padding: 1rem;border-left: 3px solid #3273dc;background-color: #f9f9f9;">
+                            <div><b>本文标题：</b><a href={config.url + url_for(page.link || page.path)} target="_blank">{page.title}</a></div>
+                            <div><b>本文作者：</b><a href={page.authorLink} target="_blank">{page.author}</a></div>
+                            <div>
+                                <b>本文链接：</b><a href={config.url + url_for(page.link || page.path)} target="_blank">{config.url + '/' + (page.link || page.path)}</a>
+                            </div>
+                            <div><b>发布日期：</b>{date(page.date)}</div>
+                            <div>
+                                <b> 版权声明：</b>
+                                本网站所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank"> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议 </a>进行许可，转载请注明出处！
+                            </div>
+                        </div>
+                     : null}
                     {/* Tags */}
                     {!index && page.tags && page.tags.length ? <div class="article-tags size-small is-uppercase mb-4">
                         <span class="mr-2">#</span>
