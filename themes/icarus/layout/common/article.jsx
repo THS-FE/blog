@@ -43,7 +43,7 @@ module.exports = class extends Component {
                             {/* Date */}
                             <time class="level-item" dateTime={date_xml(page.date)} title={date_xml(page.date)}>{date(page.date)}</time>
                             {/* author */}
-                            {page.author ? <span class="level-item"> {page.author} </span> : null}
+                            {page.author ? <span class="level-item"><a class="link-muted" href={page.authorLink} target="_blank">{page.author}</a></span> : null}
                             {/* Categories */}
                             {page.categories && page.categories.length ? <span class="level-item">
                                 {(() => {
