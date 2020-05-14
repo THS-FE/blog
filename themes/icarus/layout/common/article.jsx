@@ -88,7 +88,7 @@ module.exports = class extends Component {
                             <div><b>发布日期：</b>{date(page.date)}</div>
                             <div>
                                 <b> 版权声明：</b>
-                                本网站所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank"> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议 </a>进行许可，转载请注明出处！
+                                本网站所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可，转载请注明出处！
                             </div>
                         </div>
                      : null}
