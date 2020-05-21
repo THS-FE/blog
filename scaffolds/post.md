@@ -3,6 +3,7 @@ title: {{ title }}
 date: {{ date }}
 updated: {{ date }}
 author: 请填写作者
+authorLink: 请填写作者链接
 excerpt: 请填写简介
 thumbnail: 请填写缩略图地址(可选)
 categories:
