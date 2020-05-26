@@ -42,7 +42,7 @@ toc: true
 
 ### TypeScript
 
-- ✅  编码规范 <font color='grey'>刘莹鑫</font>
+- ✅ [编码规范](/2020/05/24/TypeScript编码规范/)  <font color='grey'>刘莹鑫</font>
 - ⬜ 类型(Type)
 - ⬜ 接口、类、命名空间、模块
 - ⬜ 装饰器
@@ -68,7 +68,7 @@ toc: true
 
 ### 基本
 
-- ✅ 前端开发必须掌握的基本概念 <font color='grey'>段美霞</font>
+- ✅ [前端开发必须掌握的基本概念](/2020/05/21/前端开发必须掌握的基本概念/) <font color='grey'>段美霞</font>
 - ⬜ 值 🆚 引用类型，栈 🆚 堆
 - ⬜ 形参 🆚 实参，转译 🆚 编译
 - ⬜ BOM 🆚 DOM
