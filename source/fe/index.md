@@ -42,7 +42,7 @@ toc: true
 
 ### TypeScript
 
-- ⬜ 编码规范 刘莹鑫
+- ✅ [编码规范](/2020/05/24/TypeScript编码规范/)  <font color='grey'>刘莹鑫</font>
 - ⬜ 类型(Type)
 - ⬜ 接口、类、命名空间、模块
 - ⬜ 装饰器
