@@ -42,7 +42,7 @@ toc: true
 
 ### TypeScript
 
-- ⬜ 编码规范 刘莹鑫
+- ✅ [编码规范](/2020/05/24/TypeScript编码规范/)  <font color='grey'>刘莹鑫</font>
 - ⬜ 类型(Type)
 - ⬜ 接口、类、命名空间、模块
 - ⬜ 装饰器
@@ -68,15 +68,12 @@ toc: true
 
 ### 基本
 
-- ⬜ 静态 🆚 动态类型，强 🆚 弱类型，编译型 🆚 解释型，
+- ✅ [前端开发必须掌握的基本概念](/2020/05/21/前端开发必须掌握的基本概念/) <font color='grey'>段美霞</font>
 - ⬜ 值 🆚 引用类型，栈 🆚 堆
-- ⬜ 形参 🆚 实参，转译 🆚 编译，IDE 🆚 编辑器
-- ⬜ 语法糖 🆚 语法盐，造轮子 🆚 发明轮子，脚手架，银弹
-- ⬜ shim 🆚 polyfill，库 🆚 框架, 方法 🆚 函数
-- ⬜ URI 🆚 URL 🆚 URN  BOM 🆚 DOM
-- ⬜ 进程 🆚 线程  对称加密 🆚 非对称加密
+- ⬜ 形参 🆚 实参，转译 🆚 编译
+- ⬜ BOM 🆚 DOM
+- ⬜ 对称加密 🆚 非对称加密
 - ⬜ 逻辑像素 🆚 物理像素 rem 🆚 em  pt 🆚 dp
-- ⬜ Session Storage 🆚 Local Storage
 - ⬜ 标准化组织
 
 ### 进阶
@@ -98,7 +95,7 @@ toc: true
 - ⬜ Fiddler
 - ⬜ Chrome DevTools
 - ⬜ PostWoman
-- ⬜ RAP2
+- ✅ [RAP2](/2020/06/01/Rap2入门/)  <font color='grey'>刘莹鑫</font>
 
 ## 协议相关
 
