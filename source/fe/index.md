@@ -95,7 +95,7 @@ toc: true
 - ⬜ Fiddler
 - ⬜ Chrome DevTools
 - ⬜ PostWoman
-- ✅ [RAP2](/2020/06/01/Rap2入门/)  <font color='grey'>刘莹鑫</font>
+- ✅ [RAP2入门](/2020/06/01/Rap2入门/)  <font color='grey'>刘莹鑫</font>
 
 ## 协议相关
 
@@ -123,7 +123,7 @@ toc: true
 ### Vue.js
 
 - ✅ [Vue.js2最佳实践](/2020/04/29/Vue-js2最佳实践/)  <font color='grey'>天下布武</font>
-- ⬜ Vue组件开发及NPM发布
+- ✅ [Vue组件开发及NPM发布（TS版）](/2020/08/20/Vue组件开发及NPM发布（TS版）/)  <font color='grey'>天下布武</font>
 - ⬜ SSR
 
 ### Angular
@@ -152,6 +152,7 @@ toc: true
 
 ---
 
+- ✅ [PWA--下一代的web应用模型](/2020/08/06/PWA-下一代的web应用模型)  <font color='grey'>曹芯萍</font>
 - ⬜ Cordova
 - ⬜ Electron
 - ⬜ Flutter？
