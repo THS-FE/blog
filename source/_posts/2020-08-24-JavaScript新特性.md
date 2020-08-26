@@ -674,7 +674,7 @@ Object.entries():
 ``` javascript
 Object.entries(obj).forEach(([key, value]) =>{
       console.log(key + ": " + value);
-})er
+});
 // id: 1
 // value: 123
 // data: [object Object]
