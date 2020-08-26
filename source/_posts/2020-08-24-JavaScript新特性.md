@@ -472,8 +472,6 @@ let arr = [{ id: 1, checked: true }, { id: 2 }, { id: 2 }, 3, 4, NaN];
 // ???? 
 ```
 
-
-
 **扩展**：[数组所有方法参考手册](https://www.runoob.com/jsref/jsref-obj-array.html)
 
 ### Promise、async/await
@@ -635,8 +633,8 @@ default：只能有一个
 
 ``` javascript
 // math.js
-export function add(a,b) { return a + b; }
-export function sub(a,b) { return a - b; }
+export function add(a,b) { return a + b; };
+export function sub(a,b) { return a - b; };
 
 export default (a,b) => a * b;
 
@@ -645,19 +643,15 @@ export default (a,b) => a * b;
 import mult, { add, sub } from './math';
 ```
 
-
-
 ## 你可以尝试的新特性
 
 ### 对象新方法
 
-- Object.values(obj): 返回由对象zhogn suozhi 组成的数组；
+- Object.values(obj): 返回由对象中属性值组成的数组；
 
-- Object.entries(obj): 返回对象的每个属性建和值组成的数组：`[[key, value],[key, value]]`
+- Object.entries(obj): 返回对象的每个属性名和所对应的值组成的数组：`[[key, value],[key, value]]`
 
-
-
-之前通过`Object.keys()`，可以获取到对象的所有的key，而要获得value值的时候：
+之前通过`Object.keys()`，可以获取到对象的所有的key，而要获得所对应的值的时候：
 
 
 ``` javascript
@@ -680,12 +674,11 @@ Object.entries():
 ``` javascript
 Object.entries(obj).forEach(([key, value]) =>{
       console.log(key + ": " + value);
-})
+})er
 // id: 1
 // value: 123
+// data: [object Object]
 ```
-
-
 
 ### **
 
@@ -694,8 +687,6 @@ Object.entries(obj).forEach(([key, value]) =>{
 ``` javascript
 let a = 7 ** 3;   // a = 343，等同于 a = Math.pow(7, 3)
 ```
-
-
 
 ### ??
 
@@ -739,6 +730,7 @@ let c = a ?? b;
 应用场景：
 
 ``` javascript
+// 1.日期格式化
 const dt = new Date();
 console.log(
     `${dt.getFullYear()+''}-`
@@ -747,9 +739,29 @@ console.log(
 );
 // 2020-08-07
 
+// 2.时间戳补位
 let timestamp = '1596808152';
 timestamp = +String(timestamp).padEnd(13, '0');
 // 1596808152000
+
+// 3.地区编码补位 省级编码2位，市级4位，区县6位，乡镇9位，村级12位。现在需要统一补充成12位
+
+/**
+ * 格式化地区编码，按指定长度输出
+ * @param regionCode 地区编码
+ * @param length 需要的长度
+ */
+formateRegionCode(regionCode: string|number, length: number = 12): string {
+  regionCode = String(regionCode);
+  if(!regionCode || regionCode.length < 2) {
+    throw new Error('地区编码错误');
+  }
+  if(length < 2) {
+    throw new Error('地区编码长度不能小于2');
+  }
+  const tempCode = regionCode.split('').slice(0, length).join('');
+  return tempCode.length < length ? tempCode.padEnd(length, '0') : tempCode;
+}
 ```
 
 ## 答案
@@ -800,8 +812,6 @@ VM37:1 Uncaught TypeError: obj is not iterable
 ``` javascript
 arr.filter( item => item.id === 2 );  // [{id: 2}, {id: 2}]
 ```
-
-
 
 
 ## 参考资料
