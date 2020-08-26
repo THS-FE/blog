@@ -30,6 +30,8 @@ toc: true
 
 #### ES6+
 
+- ✅ [JavaScript新特性](/2020/08/24/JavaScript新特性/)  <font color='grey'>吴俊</font>
+
 #### 图形
 
 - ⬜ Canvas
