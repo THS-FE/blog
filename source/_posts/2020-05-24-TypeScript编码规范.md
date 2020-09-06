@@ -134,7 +134,7 @@ namespace Foo {
   
 ## 1.6文件名
 
-- 使用破折号分隔描述性单词，比如：hero-list.ts。
+- 使用中划线分隔描述性单词，比如：hero-list.ts。
 - 使用点将描述性名称与类型分开，比如：user-info.page.ts
 - 尽量使用常规的几种类型名，包括.page,.service,.component,.pipe,.module,.directive,.controller和.middleware。当然也可以自己创建其他类型，但不宜太多。
 - 类名与文件名匹配，并遵循类命名规范。
