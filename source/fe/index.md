@@ -5,14 +5,15 @@ authorLink: https://ths-fe.github.io/
 date: 2020-04-24 17:37:22
 toc: true
 ---
+
 ## 核心
 
 ---
 
 ### 网页行为：[JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
 
-- ✅ [编码规范](https://github.com/lin-123/javascript)   thanks to airbnb 😂
-- ⬜ JavaScript简介
+- ✅ [编码规范](https://github.com/lin-123/javascript) thanks to airbnb 😂
+- ⬜ JavaScript 简介
 - ⬜ 变量提升(Variable Hoisting)、事件冒泡(Event Bubbling)、严格模式(Strict)
 - ⬜ this
 - ⬜ 闭包(Closure)
@@ -30,7 +31,7 @@ toc: true
 
 #### ES6+
 
-- ✅ [JavaScript新特性](/2020/08/24/JavaScript新特性/)  <font color='grey'>吴俊</font>
+- ✅ [JavaScript 新特性](/2020/08/24/JavaScript新特性/) <font color='grey'>吴俊</font>
 
 #### 图形
 
@@ -44,7 +45,7 @@ toc: true
 
 ### TypeScript
 
-- ✅ [编码规范](/2020/05/24/TypeScript编码规范/)  <font color='grey'>刘莹鑫</font>
+- ✅ [编码规范](/2020/05/24/TypeScript编码规范/) <font color='grey'>刘莹鑫</font>
 - ⬜ 类型(Type)
 - ⬜ 接口、类、命名空间、模块
 - ⬜ 装饰器
@@ -52,17 +53,17 @@ toc: true
 
 ### 网页样式：CSS
 
-- ⬜ CSS编码规范 刘燕
-- ⬜ CSS实战
+- ✅ [CSS 编码规范](/2020/08/28/CSS编码规范/) <font color='grey'>刘燕</font>
+- ⬜ CSS 实战
 - ⬜ BEM
 - ⬜ 响应式和媒体查询
-- ⬜ Sass编码规范 刘燕
+- ⬜ Sass 编码规范 刘燕
 
 ### 网页结构：HTML
 
-- ⬜ 编码规范 刘燕
-- ⬜ HTML简介
-- ⬜ HTML5特性
+- ✅ [HTML 编码规范](/2020/08/28/HTML编码规范/) <font color='grey'>刘燕</font>
+- ⬜ HTML 简介
+- ⬜ HTML5 特性
 
 ## 概念
 
@@ -75,13 +76,13 @@ toc: true
 - ⬜ 形参 🆚 实参，转译 🆚 编译
 - ⬜ BOM 🆚 DOM
 - ⬜ 对称加密 🆚 非对称加密
-- ⬜ 逻辑像素 🆚 物理像素 rem 🆚 em  pt 🆚 dp
+- ⬜ 逻辑像素 🆚 物理像素 rem 🆚 em pt 🆚 dp
 - ⬜ 标准化组织
 
 ### 进阶
 
 - ⬜ 字符编码(Character Encodings)
-- ⬜ SOAP和RESTful能做比较吗？
+- ⬜ SOAP 和 RESTful 能做比较吗？
 - ⬜ 开源协议
 - ⬜ 命令式 🆚 声明式
 
@@ -97,15 +98,15 @@ toc: true
 - ⬜ Fiddler
 - ⬜ Chrome DevTools
 - ⬜ PostWoman
-- ✅ [RAP2入门](/2020/06/01/Rap2入门/)  <font color='grey'>刘莹鑫</font>
+- ✅ [RAP2 入门](/2020/06/01/Rap2入门/) <font color='grey'>刘莹鑫</font>
 
 ## 协议相关
 
 ---
 
-- ⬜ OSI模型
+- ⬜ OSI 模型
 - ⬜ DNS
-- ✅ [HTTP请求方法的异同](/2020/04/26/HTTP请求方法的异同/)  <font color='grey'>天下布武</font>
+- ✅ [HTTP 请求方法的异同](/2020/04/26/HTTP请求方法的异同/) <font color='grey'>天下布武</font>
 - ⬜ HTTPS
 - ⬜ 端口
 - ⬜ URI 🆚 UDP
@@ -118,23 +119,23 @@ toc: true
 - ⬜ 主流浏览器对比
 - ⬜ 浏览器工作原理
 
-## JS框架
+## JS 框架
 
 ---
 
 ### Vue.js
 
-- ✅ [Vue.js2最佳实践](/2020/04/29/Vue-js2最佳实践/)  <font color='grey'>天下布武</font>
-- ✅ [Vue组件开发及NPM发布（TS版）](/2020/08/20/Vue组件开发及NPM发布（TS版）/)  <font color='grey'>天下布武</font>
+- ✅ [Vue.js2 最佳实践](/2020/04/29/Vue-js2最佳实践/) <font color='grey'>天下布武</font>
+- ✅ [Vue 组件开发及 NPM 发布（TS 版）](/2020/08/20/Vue组件开发及NPM发布（TS版）/) <font color='grey'>天下布武</font>
 - ⬜ SSR
 
 ### Angular
 
-- ⬜ Angular组件开发及NPM发布
+- ⬜ Angular 组件开发及 NPM 发布
 
 ### React
 
-## UI框架
+## UI 框架
 
 ---
 
@@ -154,7 +155,7 @@ toc: true
 
 ---
 
-- ✅ [PWA--下一代的web应用模型](/2020/08/06/PWA-下一代的web应用模型)  <font color='grey'>曹芯萍</font>
+- ✅ [PWA--下一代的 web 应用模型](/2020/08/06/PWA-下一代的web应用模型) <font color='grey'>曹芯萍</font>
 - ⬜ Cordova
 - ⬜ Electron
 - ⬜ Flutter？
@@ -164,9 +165,9 @@ toc: true
 
 ---
 
-- ⬜ nginx使用
+- ⬜ nginx 使用
 - ⬜ Tomcat
-- ⬜ IIS添加HTTPS
+- ⬜ IIS 添加 HTTPS
 - ⬜ Redis
 - ⬜ RabbitMQ
 - ⬜ CentOS
