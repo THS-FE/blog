@@ -139,23 +139,24 @@ for n in (0 .. 5)
         color: $primary !important
 
 /* ---------------------------------
- *           Font helpers
- * --------------------------------- */
-.size-small
-    font-size: .85rem !important
-
-.line-height-inherit
-    line-height: inherit !important
-
-/* ---------------------------------
  *          Image helpers
  * --------------------------------- */
-.image.is-7by3
-    padding-top: 42.8%
+.image
+    &.is-7by3
+        padding-top: 42.8%
 
-    img
-        bottom: 0
-        left: 0
-        position: absolute
-        right: 0
-        top: 0
+        img
+            bottom: 0
+            left: 0
+            position: absolute
+            right: 0
+            top: 0
+
+    .avatar
+        height: 100%
+        object-fit: cover
+
+    .fill
+        object-fit: cover
+        width: 100% !important
+        height: 100% !important

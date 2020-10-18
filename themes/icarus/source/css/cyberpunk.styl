@@ -57,6 +57,8 @@ $card-background-color ?= transparent
 $menu-label-color ?= $blue
 $menu-item-hover-color ?= $black
 $menu-item-hover-background-color ?= $yellow
+$menu-item-active-color ?= $black
+$menu-item-active-background-color ?= $yellow
 $menu-list-border-left ?= 1px solid $text
 $tag-color ?= $black
 $tag-background-color ?= $blue
@@ -253,6 +255,9 @@ article.article
     .article-more
         clip-button($info, $info-invert)
 
+.article-licensing
+    background: $black-ter
+
 .content
     blockquote
         background: transparent
@@ -296,3 +301,21 @@ article.article
     background: $blue
     margin-top: 45px
     cut-corner(8px)
+
+.cc-window, .cc-revoke
+    border-radius: 0 !important
+
+.cc-window
+    &:not(.cc-banner)
+        border: 1px solid $blue
+
+    &.cc-theme-classic, &.cc-theme-block
+        .cc-compliance > .cc-btn
+            border-radius: 0
+
+    &.cc-banner
+        .cc-compliance > .cc-btn
+            background-color: $blue
+
+            &:hover, &:focus
+                background-color: darken($blue, 2.5%)
