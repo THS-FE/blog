@@ -13,6 +13,8 @@ widgets:
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: toc
+        # 是否显示目录项目的序号
+        index: false
     # Google AdSense unit configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
