@@ -6,7 +6,7 @@ excerpt: JavaScript模块化的发展及规范
 thumbnail: 2020/05/29/JavaScript模块化/module4.jpg
 categories:
   - - JavaScript
-    - 模块化(Module)
+    - 模块化
 tags:
   - Module
 toc: true
