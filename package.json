@@ -6,7 +6,8 @@
     "build": "npx hexo generate",
     "clean": "npx hexo clean",
     "deploy": "npx hexo deploy",
-    "server": "npx hexo server"
+    "g": "npx hexo g",
+    "serve": "npx hexo server"
   },
   "hexo": {
     "version": "5.2.0"
@@ -14,7 +15,7 @@
   "dependencies": {
     "bulma-stylus": "^0.8.0",
     "hexo": "^5.2.0",
-    "hexo-component-inferno": "^0.10.1",
+    "hexo-component-inferno": "^0.10.3",
     "hexo-deployer-git": "^2.1.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
