@@ -3,8 +3,8 @@ title: TypeScript编码规范
 author: 刘莹鑫
 authorLink: https://github.com/lyx383982759
 excerpt: 本文规定了开发团队在开发TypeScript项目时应遵循的编码规范
-cover: 2020/05/24/TypeScript编码规范/header.jpg
-thumbnail: 2020/05/24/TypeScript编码规范/header.jpg
+cover: 2020/05/24/TypeScript编码规范/cover.jpg
+thumbnail: 2020/05/24/TypeScript编码规范/cover.jpg
 categories:
   - - TypeScript
     - 编码规范
