@@ -15,29 +15,29 @@ date: 2020-05-24 18:11:11
 updated: 2020-09-6 10:30:11
 ---
 
-# 1.命名及约定
+# 1 命名及约定
 
-## 1.1类
+## 1.1 类
 
 使用PascalCase进行命名。
 
-**Bad**
+***Bad***
 
 ```typescript
 class foo { }
 ```
 
-**Good**
+***Good***
 
 ```typescript
 class Foo { }
 ```
 
-## 1.2类成员（变量、方法）
+## 1.2 类成员（变量、方法）
 
 使用camelCase进行命名。
 
-**Bad**
+***Bad***
 
 ```typescript
 class Foo {
@@ -46,7 +46,7 @@ class Foo {
 }
 ```
 
-**Good**
+***Good***
 
 ```typescript
 class Foo {
@@ -55,13 +55,13 @@ class Foo {
 }
 ```
 
-## 1.3接口
+## 1.3 接口
 
 使用PascalCase进行命名，不要在接口名前加“I”。
 
 接口成员使用camelCase进行命名。
 
-**Bad**
+***Bad***
 
 ```typescript
 interface IFoo {
@@ -70,7 +70,7 @@ interface IFoo {
 }
 ```
 
-**Good**
+***Good***
 
 ```typescript
 interface Foo {
@@ -79,36 +79,36 @@ interface Foo {
 }
 ```
 
-## 1.4命名空间
+## 1.4 命名空间
 
 使用PascalCase进行命名。
 
-**Bad**
+***Bad***
 
 ```typescript
 namespace foo {
 }
 ```
 
-**Good**
+***Good***
 
 ```typescript
 namespace Foo {
 }
 ```
 
-## 1.5枚举
+## 1.5 枚举
 
 - 使用PascalCase进行命名。
 
-  **Bad**
+  ***Bad***
 
   ```typescript
   enum color {
   }
   ```
 
-  **Good**
+  ***Good***
 
   ```typescript
   enum Color {
@@ -117,7 +117,7 @@ namespace Foo {
 
 - 枚举成员使用PascalCase进行命名。
 
-  **Bad**
+  ***Bad***
 
   ```typescript
   enum Color {
@@ -125,7 +125,7 @@ namespace Foo {
   }
   ```
 
-  **Good**
+  ***Good***
 
   ```typescript
   enum Color {
@@ -133,10 +133,10 @@ namespace Foo {
   }
   ```
   
-## 1.6文件名
+## 1.6 文件名
 
 - 使用破折号分隔描述性单词，比如：hero-list.ts。
-- 使用点将描述性名称与类型分开，比如：user-info.page.ts
+- 使用点将描述性名称与类型分开，比如：user-info.page.ts。
 - 尽量使用常规的几种类型名，包括.page,.service,.component,.pipe,.module,.directive,.controller和.middleware。当然也可以自己创建其他类型，但不宜太多。
 - 类名与文件名匹配，并遵循类命名规范。
 
@@ -146,12 +146,11 @@ namespace Foo {
 | export class HeroListComponent { }  | hero-list.component.ts  |
 | export class UserProfileService { } | user-profile.service.ts |
 
-
-# 2.类型
+# 2 类型
 
 - 需显式地为变量、数组和方法编写类型（类型推论能够推断出类型的不需要声明类型）。
 
-  **Bad**
+  ***Bad***
 
   ```typescript
   class Bar {
@@ -170,7 +169,7 @@ namespace Foo {
   }
   ```
 
-  **Good**
+  ***Good***
 
   ```typescript
   class Bar {
@@ -196,7 +195,7 @@ namespace Foo {
 
 - 不要使用Number、String、Boolean、Object为变量、数组和方法设置类型。
 
-  **Bad**
+  ***Bad***
 
   ```typescript
   baz(foo: String): String {
@@ -204,7 +203,7 @@ namespace Foo {
   }
   ```
 
-  **Good**
+  ***Good***
 
   ```typescript
   baz(foo: string): string {
@@ -212,13 +211,13 @@ namespace Foo {
   }
   ```
 
-# 3.声明变量
+# 3 声明变量
 
 - 如果变量在其生命周期可能发生改变，尽量使用let。
 
 - 如果一个值在程序生命周期内不会改变，尽量使用const。
 
-  **Bad**
+  ***Bad***
 
   ```typescript
   var bar = 'bar';
@@ -230,7 +229,7 @@ namespace Foo {
 
   ```
 
-  **Good**
+  ***Good***
   
   ```typescript
   const bar = 'bar';
@@ -241,17 +240,17 @@ namespace Foo {
   }
   ```
 
-# 4.对象
+# 4 对象
 
 - 使用{}进行对象创建。
 
-  **bad**
+  ***Bad***
 
   ```typescript
   const  item  =  new  Object（）;
   ```
 
-  **Good**
+  ***Good***
 
   ```typescript
   const  item  = {};
@@ -259,7 +258,7 @@ namespace Foo {
 
 - 在对象字面量里使用属性简写。
 
-  **Bad**
+  ***Bad***
 
   ```typescript
   const lukeSkywalker = 'Luke Skywalker';
@@ -268,7 +267,7 @@ namespace Foo {
   };
   ```
 
-  **Good**
+  ***Good***
 
   ```typescript
   const lukeSkywalker = 'Luke Skywalker';
@@ -279,7 +278,7 @@ namespace Foo {
 
 - 仅使用引号用于属于无效标识符的属性。
 
-  **Bad**
+  ***Bad***
 
   ```typescript
   const bad = {
@@ -289,7 +288,7 @@ namespace Foo {
       };
   ```
 
-  **Good**
+  ***Good***
 
   ```typescript
   const good = {
@@ -299,35 +298,34 @@ namespace Foo {
       };
   ```
 
-
-# 5.字符串
+# 5 字符串
 
 - 使用单引号声明字符串。
 
-  **Bad**
+  ***Bad***
 
   ```typescript
   const bar = "bar";
   ```
 
-  **Good**
+  ***Good***
 
   ```typescript
   const bar = 'bar'；
   ```
 
-# 6.解构
+# 6 解构
 
 - 访问和使用对象的多个属性时，使用对象解构。
 
-  **Bad**
+  ***Bad***
 
   ```typescript
   const foo = user.firstName;
   const bar = user.lastName;
   ```
 
-  **Good**
+  ***Good***
 
   ```typescript
   const { foo, bar } = user;
@@ -335,7 +333,7 @@ namespace Foo {
 
 - 访问数组中的多个数据时，使用解构。
 
-  **Bad**
+  ***Bad***
 
   ```typescript
   const arr = [1, 2, 3, 4];
@@ -343,24 +341,24 @@ namespace Foo {
   const second = arr[1];
   ```
 
-  **Good**
+  ***Good***
 
   ```typescript
   const arr = [1, 2, 3, 4];
   const [first, second] = arr;
   ```
 
-# 7.空格
+# 7 空格
 
 - 在定义类型前面加上空格。
 - 赋值等号两边加上空格。
 - 方法、类大括号前空格。
 - 对象冒号后空格。
 
-**Bad**
+***Bad***
 
 ```typescript
-class Foo{ 
+class Foo{
  openDetail(item:string):void{
     let foo:string;
     foo='';
@@ -372,10 +370,10 @@ class Foo{
 }
 ```
 
-**Good**
+***Good***
 
 ```typescript
-class Foo { 
+class Foo {
  openDetail(item: string): void {
     let foo: string;
     foo = '';
@@ -387,37 +385,37 @@ class Foo {
 }
 ```
 
-# 8.缩进
+# 8 缩进
 
 使用两个空格缩进。
 
-# 9.分号
+# 9 分号
 
 语句结尾添加分号。
 
-**Bad**
+***Bad***
 
 ```typescript
 const foo = 'foo'
 ```
 
-**Good**
+***Good***
 
 ```typescript
 const foo = 'foo';
 ```
 
-# 10.数组
+# 10 数组
 
 - 使用[]定义数组。
 
-  **Bad**
+  ***Bad***
 
   ```typescript
   let foos:Array<Foo>;
   ```
 
-  **Good**
+  ***Good***
 
   ```typescript
   let foos:Foo[];
@@ -425,21 +423,16 @@ const foo = 'foo';
 
 - 使用push添加数据
 
-  **Bad**
+  ***Bad***
 
   ```typescript
   const foos = [];
   foos[foos.length] = 'abracadabra';
   ```
 
-  **Good**
+  ***Good***
 
   ```typescript
   const foos = [];
   foos.push('abracadabra');
   ```
-
-  
-
-
-
