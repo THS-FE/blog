@@ -4,6 +4,7 @@ author: 老吕
 authorLink: 请填写作者链接
 excerpt: storybook的基本使用指南
 cover: 2020/09/27/storybook的基本使用指南/timg.jpg
+thumbnail: 2020/09/27/storybook的基本使用指南/timg.jpg
 categories:
   - - 基础建设
     - 组件库
