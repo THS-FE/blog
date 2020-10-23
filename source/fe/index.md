@@ -175,7 +175,7 @@ toc: true
 ### Node.js
 
 - ⬜ NPM
-- ✅ [Nest.js](/2020/10/23/2020-10-23-Nest-js-基本概念介绍) <font color='grey'>张金秀</font>
+- ✅ [Nest.js](/2020/10/23/Nest-js-基本概念介绍) <font color='grey'>张金秀</font>
 
 - ⬜ mongoose
 - ⬜ socket.io
