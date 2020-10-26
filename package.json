@@ -30,5 +30,8 @@
     "hexo-util": "^2.4.0",
     "inferno": "^7.4.6",
     "inferno-create-element": "^7.4.6"
+  },
+  "devDependencies": {
+    "babel-plugin-inferno": "^6.1.1"
   }
 }
