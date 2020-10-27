@@ -3,7 +3,7 @@ title: JavaScript新特性
 author: 吴俊
 authorLink: https://github.com/Patrick-Jun
 excerpt: 从ES6+中，总结了一些比较常用的新特性的基础用法
-thumbnail: 2020/08/24/JavaScript新特性/u0.jpg
+thumbnail: 2020/08/24/JavaScript新特性/cover.jpg
 categories:
   - - JavaScript
     - 新特性
@@ -15,7 +15,7 @@ date: 2020-08-24 13:39:25
 updated: 2020-08-24 13:39:25
 ---
 
-## 前言
+## 1 前言
 
 我这里总结了一下ES6+中，一些比较实用的新特性。我们日常开发应该尽快使用这些新特性，能极大地提高我们的开发效率。
 
@@ -24,11 +24,11 @@ updated: 2020-08-24 13:39:25
 提一句：**只要用了babel，所有的新特性请放心大胆地用**。
 
 
-## 你得尽快用上的“新特性”
+## 2 你得尽快用上的“新特性”
 
 > 为什么加引号，因为现在这些都不是多新的特性了，ES6是2015年就出了，到现在已经5年了。
 
-### 模板字符串
+### 2.1 模板字符串
 
 **模版字符串**：用 \`（反引号）标识，用 ${} 将变量括起来
 
@@ -121,7 +121,7 @@ function replace(str){
 }
 ```
 
-### 属性简写
+### 2.2 属性简写
 
 **old**：
 
@@ -167,7 +167,7 @@ const params = {
 
    答案：[见 4.答案](https://ths-fe.github.io/2020/08/24/JavaScript新特性/#答案)
 
-### 方法属性
+### 2.3 方法属性
 
 **old**：
 
@@ -232,7 +232,7 @@ let obj2 = {
 ```
 
 
-### 箭头函数
+### 2.4 箭头函数
 
 箭头函数表达方式：`=>`，因为像个箭头，所以叫箭头函数。
 
@@ -277,7 +277,7 @@ let getTempItem = () => { id: 's8309a82n', name: "Temp" };
 getTempItem();
 ```
 
-### “你懂的”运算符
+### 2.5 “你懂的”运算符
 
 Spread operator，这个中文名称有好几种说法（扩展运算符、延展操作符、展开运算符等等），而我给它起的名字就叫**你懂的运算符**。它表示方法前面见过了`...`，作用是可以将数组、字符串、对象等在语法层面上展开。
 
@@ -340,7 +340,7 @@ console.log([...obj]);
 
 **扩展了解**：见下一章
 
-### 解构赋值
+### 2.6 解构赋值
 
 **old**:
 
@@ -416,7 +416,7 @@ let [a=0, b=0, c=0, d=0, e=0] = arr;
    ```
 
 
-### 数组新方法
+### 2.7 数组新方法
 
 - `find(): any`：返回找到满足条件的第一项，否则返回undefined
 - `findIndex(): number`：找到满足条件的一项的索引
@@ -474,7 +474,7 @@ let arr = [{ id: 1, checked: true }, { id: 2 }, { id: 2 }, 3, 4, NaN];
 
 **扩展**：[数组所有方法参考手册](https://www.runoob.com/jsref/jsref-obj-array.html)
 
-### Promise、async/await
+### 2.8 Promise、async/await
 
 - 回调地狱：“无限”（大量）地使用嵌套回调函数，好像掉进了18层地狱
 
@@ -584,7 +584,7 @@ Promise.all([promise1, promise2, ...]).then(res => {
 - async/await 就是一对“海尔兄弟”，缺一不可。`async`声明一个函数（函数返回会处理成一个Promise），函数里面必须要有`await`，await标识一个需要等一会（异步）的操作。函数内部使用了await，那么该函数就必须用async声明。
 - await、return和return await的陷阱：https://jakearchibald.com/2017/await-vs-return-vs-return-await/
 
-### Modules
+### 2.9 Modules
 
 模块化是ES6比较重要的特性，在此之前JS是不支持原生的模块化的，需要通过第三方库实现如RequireJS。
 
@@ -643,9 +643,9 @@ export default (a,b) => a * b;
 import mult, { add, sub } from './math';
 ```
 
-## 你可以尝试的新特性
+## 3 你可以尝试的新特性
 
-### 对象新方法
+### 3.1 对象新方法
 
 - Object.values(obj): 返回由对象中属性值组成的数组；
 
@@ -680,7 +680,7 @@ Object.entries(obj).forEach(([key, value]) =>{
 // data: [object Object]
 ```
 
-### **
+### 3.2 **
 
 指数操作符：类似数学的书写方式进行指数计算，可以看做是`Math.pow()`的简写
 
@@ -688,7 +688,7 @@ Object.entries(obj).forEach(([key, value]) =>{
 let a = 7 ** 3;   // a = 343，等同于 a = Math.pow(7, 3)
 ```
 
-### ??
+### 3.3 ??
 
 当我们查询某个属性时，经常会给没有该属性就设置一个默认的值，比如下面两种方式：
 
@@ -706,7 +706,7 @@ let c = a ?? b;
 // 等价于let c = a !== undefined && a !== null ? a : b;
 ```
 
-### padStart/padEnd
+### 3.4 padStart/padEnd
 
 用于在字符串开头或结尾添加填充字符串（ES2017）
 
@@ -764,7 +764,7 @@ formateRegionCode(regionCode: string|number, length: number = 12): string {
 }
 ```
 
-## 答案
+## 4 答案
 
 **2.2 question**: 
 
@@ -814,7 +814,7 @@ arr.filter( item => item.id === 2 );  // [{id: 2}, {id: 2}]
 ```
 
 
-## 参考资料
+## 5 参考资料
 
 1. [Modern JavaScript, 10 things you should be using, starting today - DEV](https://dev.to/itnext/modern-javascript-10-things-you-should-be-using-starting-today-22dp)
 
