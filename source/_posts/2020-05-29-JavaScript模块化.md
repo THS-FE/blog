@@ -3,10 +3,11 @@ title: JavaScript模块化
 author: 刘剑
 authorLink: http://www.github.com/liujian518
 excerpt: JavaScript模块化的发展及规范
+cover: 2020/05/29/JavaScript模块化/module4.jpg
 thumbnail: 2020/05/29/JavaScript模块化/module4.jpg
 categories:
   - - JavaScript
-    - 模块化(Module)
+    - 模块化
 tags:
   - Module
 toc: true
