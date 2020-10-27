@@ -3,6 +3,7 @@ title: JavaScript新特性
 author: 吴俊
 authorLink: https://github.com/Patrick-Jun
 excerpt: 从ES6+中，总结了一些比较常用的新特性的基础用法
+cover: 2020/08/24/JavaScript新特性/cover.jpg
 thumbnail: 2020/08/24/JavaScript新特性/cover.jpg
 categories:
   - - JavaScript
