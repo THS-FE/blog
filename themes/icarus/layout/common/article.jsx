@@ -3,6 +3,7 @@ const { Component, Fragment } = require('inferno');
 const Share = require('./share');
 const Donates = require('./donates');
 const Comment = require('./comment');
+const ArticleLicensing = require('hexo-component-inferno/lib/view/misc/article_licensing');
 
 /**
  * Get the word count of text.
@@ -20,30 +21,37 @@ module.exports = class extends Component {
     render() {
         const { config, helper, page, index } = this.props;
         const { article, plugins } = config;
-        const { has_thumbnail, get_thumbnail, url_for, date, date_xml, __, _p } = helper;
+        const { url_for, date, date_xml, __, _p } = helper;
 
         const indexLaunguage = config.language || 'en';
         const language = page.lang || page.language || config.language || 'en';
+        const cover = page.cover ? url_for(page.cover) : null;
 
         return <Fragment>
             {/* Main content */}
             <div class="card">
                 {/* Thumbnail */}
-                {has_thumbnail(page) ? <div class="card-image">
+                {cover ? <div class="card-image">
                     {index ? <a href={url_for(page.link || page.path)} class="image is-7by3">
-                        <img class="thumbnail" src={get_thumbnail(page)} alt={page.title || get_thumbnail(page)} />
+                        <img class="fill" src={cover} alt={page.title || cover} />
                     </a> : <span class="image is-7by3">
-                            <img class="thumbnail" src={get_thumbnail(page)} alt={page.title || get_thumbnail(page)} />
-                        </span>}
+                        <img class="fill" src={cover} alt={page.title || cover} />
+                    </span>}
                 </div> : null}
                 {/* Metadata */}
                 <article class={`card-content article${'direction' in page ? ' ' + page.direction : ''}`} role="article">
-                    {page.layout !== 'page' ? <div class="article-meta size-small is-uppercase level is-mobile">
+                    {page.layout !== 'page' ? <div class="article-meta is-size-7 is-uppercase level is-mobile">
                         <div class="level-left">
-                            {/* Date */}
-                            <time class="level-item" dateTime={date_xml(page.date)} title={date_xml(page.date)}>{date(page.date)}</time>
+                            {/* Creation Date */}
+                            {page.date && <span class="level-item" dangerouslySetInnerHTML={{
+                                __html: _p('article.created_at', `<time dateTime="${date_xml(page.date)}" title="${date_xml(page.date)}">${date(page.date)}</time>`)
+                            }}></span>}
+                            {/* Last Update Date */}
+                            {page.updated && <span class="level-item" dangerouslySetInnerHTML={{
+                                __html: _p('article.updated_at', `<time dateTime="${date_xml(page.updated)}" title="${date_xml(page.updated)}">${date(page.updated)}</time>`)
+                            }}></span>}
                             {/* author */}
-                            {page.author ? <span class="level-item"><a class="link-muted" href={page.authorLink} target="_blank">{page.author}</a></span> : null}
+                            {page.author ? <span class="level-item"> {page.author} </span> : null}
                             {/* Categories */}
                             {page.categories && page.categories.length ? <span class="level-item">
                                 {(() => {
@@ -62,12 +70,12 @@ module.exports = class extends Component {
                                 {(() => {
                                     const words = getWordCount(page._content);
                                     const time = moment.duration((words / 150.0) * 60, 'seconds');
-                                    return `${time.locale(index ? indexLaunguage : language).humanize()} ${__('article.read')} (${__('article.about')} ${words} ${__('article.words')})`;
+                                    return `${_p('article.read_time', time.locale(index ? indexLaunguage : language).humanize())} (${_p('article.word_count', words)})`;
                                 })()}
                             </span> : null}
                             {/* Visitor counter */}
                             {!index && plugins && plugins.busuanzi === true ? <span class="level-item" id="busuanzi_container_page_pv" dangerouslySetInnerHTML={{
-                                __html: '<i class="far fa-eye"></i>' + _p('plugin.visit', '&nbsp;&nbsp;<span id="busuanzi_value_page_pv">0</span>')
+                                __html: _p('plugin.visit_count', '<span id="busuanzi_value_page_pv">0</span>')
                             }}></span> : null}
                         </div>
                     </div> : null}
@@ -77,30 +85,18 @@ module.exports = class extends Component {
                     </h1>
                     {/* Content/Excerpt */}
                     <div class="content" dangerouslySetInnerHTML={{ __html: index && page.excerpt ? page.excerpt : page.content }}></div>
-                    {/* Copyright */}
-                    {!index ?
-                        <div style="font-size: 1rem;letter-spacing: .02rem;word-break: break-all;margin: 2.5rem 0 0;padding: 1rem;border-left: 3px solid #3273dc;background-color: #f9f9f9;">
-                            <div><b>本文标题：</b><a href={config.url + url_for(page.link || page.path)} target="_blank">{page.title}</a></div>
-                            <div><b>本文作者：</b><a href={page.authorLink} target="_blank">{page.author}</a></div>
-                            <div>
-                                <b>本文链接：</b><a href={config.url + url_for(page.link || page.path)} target="_blank">{config.url + '/' + (page.link || page.path)}</a>
-                            </div>
-                            <div><b>发布日期：</b>{date(page.date)}</div>
-                            <div>
-                                <b> 版权声明：</b>
-                                本网站所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可，转载请注明出处！
-                            </div>
-                        </div>
-                     : null}
+                    {/* Licensing block */}
+                    {!index && article && article.licenses && Object.keys(article.licenses)
+                        ? <ArticleLicensing.Cacheable page={page} config={config} helper={helper} /> : null}
                     {/* Tags */}
-                    {!index && page.tags && page.tags.length ? <div class="article-tags size-small is-uppercase mb-4">
+                    {!index && page.tags && page.tags.length ? <div class="article-tags is-size-7 mb-4">
                         <span class="mr-2">#</span>
                         {page.tags.map(tag => {
                             return <a class="link-muted mr-2" rel="tag" href={url_for(tag.path)}>{tag.name}</a>;
                         })}
                     </div> : null}
                     {/* "Read more" button */}
-                    {index && page.excerpt ? <a class="article-more button is-small size-small" href={`${url_for(page.path)}#more`}>{__('article.more')}</a> : null}
+                    {index && page.excerpt ? <a class="article-more button is-small is-size-7" href={`${url_for(page.link || page.path)}#more`}>{__('article.more')}</a> : null}
                     {/* Share button */}
                     {!index ? <Share config={config} page={page} helper={helper} /> : null}
                 </article>

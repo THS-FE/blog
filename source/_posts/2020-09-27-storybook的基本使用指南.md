@@ -2,8 +2,13 @@
 title: Storybook的基本使用指南
 author: 老吕
 authorLink: 请填写作者链接
+<<<<<<< HEAD
 excerpt: Storybook的基本使用指南
 thumbnail: 2020/09/27/storybook的基本使用指南/cover.jpg
+=======
+excerpt: storybook的基本使用指南
+cover: 2020/09/27/storybook的基本使用指南/timg.jpg
+>>>>>>> 93a2d68c2f0bd8d014a76c4ac58e7f1fd005b5e5
 categories:
   - - 基础建设
     - 组件库

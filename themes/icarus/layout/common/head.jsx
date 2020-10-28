@@ -1,5 +1,6 @@
 const { Component } = require('inferno');
 const MetaTags = require('hexo-component-inferno/lib/view/misc/meta');
+const WebApp = require('hexo-component-inferno/lib/view/misc/web_app');
 const OpenGraph = require('hexo-component-inferno/lib/view/misc/open_graph');
 const StructuredData = require('hexo-component-inferno/lib/view/misc/structured_data');
 const Plugins = require('./plugins');
@@ -29,11 +30,10 @@ function getPageTitle(page, siteTitle, helper) {
 
 module.exports = class extends Component {
     render() {
-        const { env, site, config, helper, page } = this.props;
+        const { site, config, helper, page } = this.props;
         const { url_for, cdn, fontcdn, iconcdn, is_post } = helper;
         const {
             url,
-            meta_generator = true,
             head = {},
             article,
             highlight,
@@ -41,6 +41,7 @@ module.exports = class extends Component {
         } = config;
         const {
             meta = [],
+            manifest = {},
             open_graph = {},
             structured_data = {},
             canonical_url = page.permalink,
@@ -65,8 +66,10 @@ module.exports = class extends Component {
 
         if (typeof page.og_image === 'string') {
             images = [page.og_image];
-        } else if (helper.has_thumbnail(page)) {
-            images = [helper.get_thumbnail(page)];
+        } else if (typeof page.cover === 'string') {
+            images = [url_for(page.cover)];
+        } else if (typeof page.thumbnail === 'string') {
+            images = [url_for(page.thumbnail)];
         } else if (article && typeof article.og_image === 'string') {
             images = [article.og_image];
         } else if (page.content && page.content.includes('<img')) {
@@ -106,11 +109,17 @@ module.exports = class extends Component {
 
         return <head>
             <meta charset="utf-8" />
-            {meta_generator ? <meta name="generator" content={`Hexo ${env.version}`} /> : null}
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
             {meta && meta.length ? <MetaTags meta={meta} /> : null}
 
             <title>{getPageTitle(page, config.title, helper)}</title>
+
+            <WebApp.Cacheable
+                helper={helper}
+                favicon={favicon}
+                icons={manifest.icons}
+                themeColor={manifest.theme_color}
+                name={manifest.name || config.title} />
 
             {typeof open_graph === 'object' && open_graph !== null ? <OpenGraph
                 type={open_graph.type || (is_post(page) ? 'article' : 'website')}
@@ -119,7 +128,7 @@ module.exports = class extends Component {
                 updated={page.updated}
                 author={open_graph.author || config.author}
                 description={open_graph.description || page.description || page.excerpt || page.content || config.description}
-                keywords={page.keywords || (page.tags && page.tags.length ? page.tags : undefined) || config.keywords}
+                keywords={(page.tags && page.tags.length ? page.tags : undefined) || config.keywords}
                 url={open_graph.url || page.permalink || url}
                 images={openGraphImages}
                 siteName={open_graph.site_name || config.title}
@@ -141,7 +150,7 @@ module.exports = class extends Component {
                 images={structuredImages} /> : null}
 
             {canonical_url ? <link rel="canonical" href={canonical_url} /> : null}
-            {rss ? <link rel="alternative" href={url_for(rss)} title={config.title} type="application/atom+xml" /> : null}
+            {rss ? <link rel="alternate" href={url_for(rss)} title={config.title} type="application/atom+xml" /> : null}
             {favicon ? <link rel="icon" href={url_for(favicon)} /> : null}
             <link rel="stylesheet" href={iconcdn()} />
             {hlTheme ? <link rel="stylesheet" href={cdn('highlight.js', '9.12.0', 'styles/' + hlTheme + '.css')} /> : null}
@@ -150,7 +159,7 @@ module.exports = class extends Component {
             <Plugins site={site} config={config} helper={helper} page={page} head={true} />
 
             {adsenseClientId ? <script data-ad-client={adsenseClientId}
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async={true}></script> : null}
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script> : null}
         </head>;
     }
 };
