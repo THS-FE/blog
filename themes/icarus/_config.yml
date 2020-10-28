@@ -290,7 +290,7 @@ widgets:
         # AdSense client ID
         client_id: ca-pub-6826040978803389
         # AdSense AD unit ID
-        slot_id: abc
+        slot_id: '1033672070'
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:

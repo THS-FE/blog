@@ -28,7 +28,10 @@
     "hexo-renderer-stylus": "^2.0.1",
     "hexo-server": "^2.0.0",
     "hexo-util": "^2.4.0",
-    "inferno": "^7.4.5",
-    "inferno-create-element": "^7.4.5"
+    "inferno": "^7.4.6",
+    "inferno-create-element": "^7.4.6"
+  },
+  "devDependencies": {
+    "babel-plugin-inferno": "^6.1.1"
   }
 }

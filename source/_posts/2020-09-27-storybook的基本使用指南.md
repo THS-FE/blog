@@ -8,7 +8,11 @@ thumbnail: 2020/09/27/storybook的基本使用指南/cover.jpg
 =======
 excerpt: storybook的基本使用指南
 cover: 2020/09/27/storybook的基本使用指南/timg.jpg
+<<<<<<< HEAD
 >>>>>>> 93a2d68c2f0bd8d014a76c4ac58e7f1fd005b5e5
+=======
+thumbnail: 2020/09/27/storybook的基本使用指南/timg.jpg
+>>>>>>> eb43adada737016be241ed07436536d382961b4c
 categories:
   - - 基础建设
     - 组件库

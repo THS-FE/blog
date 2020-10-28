@@ -107,6 +107,7 @@ toc: true
 
 - ⬜ OSI 模型
 - ⬜ DNS
+- ✅ [HTTP 协议演变](/2020/10/21/HTTP协议演变/) <font color='grey'>马文超</font>
 - ✅ [HTTP 请求方法的异同](/2020/04/26/HTTP请求方法的异同/) <font color='grey'>天下布武</font>
 - ⬜ HTTPS
 - ⬜ 端口
@@ -176,7 +177,8 @@ toc: true
 ### Node.js
 
 - ⬜ NPM
-- ⬜ Nest.js
+- ✅ [Nest.js](/2020/10/23/Nest-js-基本概念介绍) <font color='grey'>张金秀</font>
+
 - ⬜ mongoose
 - ⬜ socket.io
 
