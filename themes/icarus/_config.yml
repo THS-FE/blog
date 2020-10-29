@@ -285,7 +285,7 @@ widgets:
     # Google AdSense unit configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: right
+        position: left
         type: adsense
         # AdSense client ID
         client_id: ca-pub-6826040978803389
