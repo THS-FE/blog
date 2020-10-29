@@ -23,7 +23,7 @@ widget:
     catalogue: '目录'
     subscribe_email: '订阅更新'
     subscribe: '订阅'
-    adsense: 'ad'
+    adsense: ' '
 article:
     created_at: '%s发表'
     updated_at: '%s更新'
