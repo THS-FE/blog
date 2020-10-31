@@ -206,7 +206,7 @@ widgets:
     # Profile widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: right
+        position: left
         type: profile
         # Author name
         author: 思路大前端团队
@@ -239,10 +239,19 @@ widgets:
         #     RSS:
         #         icon: fas fa-rss
         #         url: /
-    # Table of contents widget configurations
+    # Google AdSense unit configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
+        type: adsense
+        # AdSense client ID
+        client_id: ca-pub-6826040978803389
+        # AdSense AD unit ID
+        slot_id: '1033672070'
+    # Table of contents widget configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: right
         type: toc
     # Recommendation links widget configurations
     # -
@@ -256,7 +265,7 @@ widgets:
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: categories
     # Recent posts widget configurations
     -
@@ -266,7 +275,7 @@ widgets:
     # Archives widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: right
+        position: left
         type: archives
     # Tags widget configurations
     -
@@ -282,15 +291,6 @@ widgets:
     #    description: 
         # Feedburner ID
     #    feedburner_id: ''
-    # Google AdSense unit configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: adsense
-        # AdSense client ID
-        client_id: ca-pub-6826040978803389
-        # AdSense AD unit ID
-        slot_id: '1033672070'
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
