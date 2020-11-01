@@ -15,6 +15,10 @@ widgets:
         type: toc
         # 是否显示目录项目的序号
         index: false
+        #  默认折叠所有标题
+        collapsed: false
+        # 最多显示的标题级数（1-6）
+        depth: 6
     # Google AdSense unit configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -23,4 +27,4 @@ widgets:
         # AdSense client ID
         client_id: ca-pub-6826040978803389
         # AdSense AD unit ID
-        slot_id: '1033672070'
+        slot_id: '1033672070'A
