@@ -81,6 +81,7 @@ toc: true
 
 ### 进阶
 
+- ✅ [函数式编程范式](/2020/10/13/函数式编程范式/) <font color='grey'>吴俊</font>
 - ⬜ 字符编码(Character Encodings)
 - ⬜ SOAP 和 RESTful 能做比较吗？
 - ⬜ 开源协议
