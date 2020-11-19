@@ -168,7 +168,7 @@ toc: true
 
 ---
 
-- ⬜ nginx 使用
+- ✅ [nginx 使用](/2020/11/19/nginx入门/) <font color='grey'>马文超</font>
 - ⬜ Tomcat
 - ⬜ IIS 添加 HTTPS
 - ⬜ Redis
