@@ -21,7 +21,7 @@ toc: true
 - ⬜ JSON(JavaScript Object Notation)
 - ⬜ 作用域(Scope)与作用域链(Scope Chain)
 - ⬜ AJAX(Asynchronous Javascript And XML)
-- ✅ [跨域(Cross Domain)](/2020/08/27/跨域解决/) <font color='grey'>苏永蓬</font>
+- ✅ [跨域解决](/2020/08/27/跨域解决/) <font color='grey'>苏永蓬</font>
 - ⬜ 模块化(Module)
 - ⬜ 事件循环(Event Loop)
 - ⬜ 正则表达式(Regular expressions)
@@ -110,7 +110,7 @@ toc: true
 - ⬜ DNS
 - ✅ [HTTP 协议演变](/2020/10/21/HTTP协议演变/) <font color='grey'>马文超</font>
 - ✅ [HTTP 请求方法的异同](/2020/04/26/HTTP请求方法的异同/) <font color='grey'>天下布武</font>
-- ✅ [HTTPS](/2020/11/12/浅谈HTTPS/) <font color='grey'>苏永蓬</font>
+- ✅ [浅谈HTTPS](/2020/11/12/浅谈HTTPS/) <font color='grey'>苏永蓬</font>
 - ⬜ 端口
 - ⬜ URI 🆚 UDP
 
