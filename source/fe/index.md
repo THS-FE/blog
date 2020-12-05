@@ -54,6 +54,7 @@ toc: true
 ### 网页样式：CSS
 
 - ✅ [CSS 编码规范](/2020/08/28/CSS编码规范/) <font color='grey'>刘燕</font>
+- ✅ [CSS 变量的基本用法](/2020/12/05/CSS变量的基本用法/) <font color='grey'>刘燕</font>
 - ⬜ CSS 实战
 - ⬜ BEM
 - ⬜ 响应式和媒体查询
