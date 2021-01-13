@@ -1,7 +1,6 @@
 ---
 title: {{ title }}
 date: {{ date }}
-updated: {{ date }}
 author: 请填写作者
 authorLink: 请填写作者链接
 excerpt: 请填写简介
