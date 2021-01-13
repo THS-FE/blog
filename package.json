@@ -10,12 +10,12 @@
     "serve": "npx hexo server"
   },
   "hexo": {
-    "version": "5.2.0"
+    "version": "5.3.0"
   },
   "dependencies": {
     "bulma-stylus": "^0.8.0",
-    "hexo": "^5.2.0",
-    "hexo-component-inferno": "^0.10.4",
+    "hexo": "^5.3.0",
+    "hexo-component-inferno": "^0.10.5",
     "hexo-deployer-git": "^2.1.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
