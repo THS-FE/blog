@@ -12,7 +12,6 @@ tags:
   - Storybook
 toc: true
 date: 2020-09-27 22:01:51
-updated: 2020-09-27 22:01:51
 ---
 
 # 1 什么是 Storybook

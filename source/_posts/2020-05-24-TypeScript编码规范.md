@@ -12,7 +12,6 @@ tags:
   - TypeScript
 toc: true
 date: 2020-05-24 18:11:11
-updated: 2020-09-6 10:30:11
 ---
 
 # 1 命名及约定
