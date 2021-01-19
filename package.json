@@ -10,7 +10,7 @@
     "serve": "npx hexo server"
   },
   "hexo": {
-    "version": "5.3.0"
+    "version": "5.2.0"
   },
   "dependencies": {
     "bulma-stylus": "^0.8.0",
