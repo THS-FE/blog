@@ -24,7 +24,7 @@ toc: true
 - ✅ [跨域解决](/2020/08/27/跨域解决/) <font color='grey'>苏永蓬</font>
 - ⬜ 模块化(Module)
 - ⬜ 事件循环(Event Loop)
-- ⬜ 正则表达式(Regular expressions)
+- ✅ [正则表达式(Regular expressions)](/2021/01/29/正则表达式/) <font color='grey'>吴俊</font>
 - ⬜ Web API(CustomEvent、WebSockets、Web Workers.etc)
 
 #### ES5-
