@@ -131,7 +131,7 @@ GitLab Runner用于运行项目持续集成、持续部署脚本并将结果发�
 
 开发推送代码到 GitLab，GitLab 检测项目中是否存在 .gitlab-ci.yml 配置，通过该配置找到指定的 GitLab-Runner，runner 执行提前配置好的脚本，进行编译、 集成、测试、交付、部署，一切顺利地话会分发到各个服务器（测试服务器、预发布服务器、正式服务器等），此时一个迭代开发上线流程走完。
 
-![](https://cdn.nlark.com/yuque/0/2021/webp/2882810/1612089592279-745c61fa-b57c-4b29-ae79-73e9501b54e8.webp#align=left&display=inline&height=411&margin=%5Bobject%20Object%5D&originHeight=411&originWidth=550&size=0&status=done&style=none&width=550)
+![GitLab、GitLab CI 、GitLab-Runner关系](gitLab-runner.png)
 
 ## 2.3 .gitlab-ci.yml
 
