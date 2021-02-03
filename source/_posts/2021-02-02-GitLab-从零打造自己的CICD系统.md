@@ -322,8 +322,13 @@ variables:
   deployServer: weihu@192.168.0.183
   # 部署的服务器位置（相对ssh 根路径）
   deployDirectory: \Product\test\nginx-1.18.0\html\pinxx
-  # 部署的服务器位置（相对ssh 根路径）
+  # 测试环境地址
   deployWebUrl: http://192.168.0.183:8104/pinxx
+  # npm 源地址
+  npmRegistry: http://192.168.0.180:4873
+  # sassBinary 下载源
+  sassBinaryDownloadUrl: https://npm.taobao.org/mirrors/node-sass/
+
 # 定义三个阶段
 stages:
   - build
@@ -338,8 +343,8 @@ build-job:
     - vue
   script:
     - echo "build .........."
-    - npm config set registry http://192.168.0.180:4873
-    - npm config set sass_binary_site "https://npm.taobao.org/mirrors/node-sass/"
+    - npm config set registry $npmRegistry
+    - npm config set sass_binary_site $sassBinaryDownloadUrl
     - npm install
     - npm run build
   cache:
@@ -385,8 +390,10 @@ deploy-job:
 after_script:
   - echo "End of pipelines"
 
+
 ```
 
 3. 提交以上文件会自动触发流水线，可以切换到流水线页面查看流水线执行进度。
 
 ![流水线](流水线进度.png)
+
