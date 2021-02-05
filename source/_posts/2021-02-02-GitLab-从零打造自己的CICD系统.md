@@ -24,7 +24,7 @@ date: 2021-02-02 22:48:12
 1. 开发完成后，开发人员在本机运行编译，等待编译打包。
 1. 打包完后通过远程桌面部署最新的包到测试环境。
 1. 通知测试人员进行测试验证。
-1. 测试人员反馈 BUG，开发人员修改后，重复2.3.4。
+1. 测试人员反馈 BUG，开发人员修改后，重复 2.3.4。
 1. 测试通过，准备某个晚上半夜或者周末上线生产环境。
 1. 测试人员等待到半夜或者周末验证生产环境系统。
 
@@ -115,17 +115,17 @@ date: 2021-02-02 22:48:12
 ### 1.3.4 它们之间的关系
 
 持续集成是持续交付和持续部署的一部分。持续部署和持续交付区别在于持续部署是自动执行发布，持续交付需要手动点击触发自动发布。
-![CICD之间关系](CICD之间关系.png)
+![CICD之间关系](CICD 之间关系.png)
 
 # 2 GitLab
 
 ## 2.1 GitLab CI/CD
 
-GitLab CI / CD是GitLab内置的工具，可以将所有软件开发的持续方法（持续集成、持续交付、持续部署）应用于软件，而无需第三方应用程序。（使用过Jenkins的，可以理解为他跟Jenkins一样的功能，只是它是GitLab自带的，使用起来更简单）
+GitLab CI / CD是 GitLab 内置的工具，可以将所有软件开发的持续方法（持续集成、持续交付、持续部署）应用于软件，而无需第三方应用程序。（使用过 Jenkins 的，可以理解为他跟 Jenkins 一样的功能，只是它是 GitLab 自带的，使用起来更简单）
 
 ## 2.2 GitLab-Runner
 
-GitLab Runner用于运行项目持续集成、持续部署脚本并将结果发送回GitLab，与GitLab CI/CD一起使用。
+GitLab Runner用于运行项目持续集成、持续部署脚本并将结果发送回 GitLab，与 GitLab CI/CD 一起使用。
 
 ## 2.3 GitLab、GitLab CI 、GitLab-Runner关系
 
@@ -156,7 +156,7 @@ job1:  # 这是一个注释
   script: "execute-script-for-job1"
 ```
 
-- 短杠+空白字符+内容表示数组的一项，以下例子中代表stages里边有三项，转换为 JSON 来理解的话是{"stages":["build","test","deploy"]}
+- 短杠+空格+内容表示数组的一项，以下例子中代表stages里边有三项，转换为 JSON 来理解的话是{"stages":["build","test","deploy"]}
 
 ```yaml
 stages:
@@ -165,7 +165,7 @@ stages:
   - deploy
 ```
 
-- 对象使用冒号+空白（ :   ）分开键值和内容，以下例子中代表variables里边有三项，转换为 JSON 来理解的话是{"variables":{"deployServer":"weihu@192.168.0.183","deployDirectory":"......","deployWebUrl":"......."}}
+- 对象使用冒号+空格（ :   ）分开键值和内容，以下例子中代表 variables 里边有三项，转换为 JSON 来理解的话是{"variables":{"deployServer":"weihu@192.168.0.183","deployDirectory":"......","deployWebUrl":"......."}}
 
 ```yaml
 variables:
@@ -197,10 +197,10 @@ variables:
 
 | 关键词 | 描述 |
 | :--- | :--- |
-| [`script`](https://docs.gitlab.com/ee/ci/yaml/README.html#script) | 在作业里边会被runner执行的脚本，脚本执行的目录为你项目的目录 |
+| [`script`](https://docs.gitlab.com/ee/ci/yaml/README.html#script) | 在作业里边会被 runner 执行的脚本，脚本执行的目录为你项目的目录 |
 | [`after_script`](https://docs.gitlab.com/ee/ci/yaml/README.html#after_script) | 在作业运行后执行的脚本，可以全局定义，也可以在作业中定义 |
 | [`allow_failure`](https://docs.gitlab.com/ee/ci/yaml/README.html#allow_failure) | 允许一个作业失败后影响流水线的失败 |
-| [`artifacts`](https://docs.gitlab.com/ee/ci/yaml/README.html#artifacts) | 翻译过来是制品的意思，会将流水线过程中的一些文件、文件夹打包生成一个外部可下载的链接，还用于在后续作业中传递缓存。有以下属性：1.paths 文件路径2.exclude 要排除的文件3.name 制品名称4.expose_as 在UI页面导出名5.untracked 布尔类型，是否将git忽略的文件加到制品中6.when on_success；on_failure；always 何时上传制品7.expire_in 过期时间默认30天8.reports 收集测试报告 |
+| [`artifacts`](https://docs.gitlab.com/ee/ci/yaml/README.html#artifacts) | 翻译过来是制品的意思，会将流水线过程中的一些文件、文件夹打包生成一个外部可下载的链接，还用于在后续作业中传递缓存。有以下属性：1.paths 文件路径2.exclude 要排除的文件 3.name 制品名称 4.expose_as 在UI页面导出名 5.untracked 布尔类型，是否将git忽略的文件加到制品中 6.when on_success；on_failure；always 何时上传制品 7.expire_in 过期时间默认30天 8.reports 收集测试报告 |
 | [`before_script`](https://docs.gitlab.com/ee/ci/yaml/README.html#before_script) | 在作业运行前执行的脚本，可以全局定义，也可以在作业中定义 |
 | [`cache`](https://docs.gitlab.com/ee/ci/yaml/README.html#cache) | 缓存一些文件，用于后续任务使用。比如node_modules、maven下载的包这些缓存下来，可以大大优化流水线效率 |
 | [`coverage`](https://docs.gitlab.com/ee/ci/yaml/README.html#coverage) | 用于获取项目的代码覆盖率 |
@@ -212,15 +212,15 @@ variables:
 | [`include`](https://docs.gitlab.com/ee/ci/yaml/README.html#include) | 引入外部的YAML文件 |
 | [`interruptible`](https://docs.gitlab.com/ee/ci/yaml/README.html#interruptible) | 定义在新的运行使其冗余时是否可以取消该作业 |
 | [`only`](https://docs.gitlab.com/ee/ci/yaml/README.html#onlyexcept-basic) | 可以限定特定分支，特定tag等才执行作业 |
-| [`pages`](https://docs.gitlab.com/ee/ci/yaml/README.html#pages) | 用于将静态内容上传到GitLab |
+| [`pages`](https://docs.gitlab.com/ee/ci/yaml/README.html#pages) | 用于将静态内容上传到 GitLab |
 | [`parallel`](https://docs.gitlab.com/ee/ci/yaml/README.html#parallel) | 一个作业并行多少个实例 |
 | [`release`](https://docs.gitlab.com/ee/ci/yaml/README.html#release) | 用于创建一个release |
 | [`resource_group`](https://docs.gitlab.com/ee/ci/yaml/README.html#resource_group) | 限制作业并发执行 |
 | [`retry`](https://docs.gitlab.com/ee/ci/yaml/README.html#retry) | 设置一个任务在某种情况下的重试次数 |
 | [`rules`](https://docs.gitlab.com/ee/ci/yaml/README.html#rules) | 规定任务的执行规则，使用表达式来确定哪些作业执行哪些不执行等等 |
-| [`services`](https://docs.gitlab.com/ee/ci/yaml/README.html#services) | 使用docker服务镜像 |
+| [`services`](https://docs.gitlab.com/ee/ci/yaml/README.html#services) | 使用 docker服务镜像 |
 | [`stage`](https://docs.gitlab.com/ee/ci/yaml/README.html#stage) | 翻译过来是阶段的意思，用于归类作业，按照阶段定义的顺序来执行 |
-| [`tags`](https://docs.gitlab.com/ee/ci/yaml/README.html#tags) | 指定该项目可访问范围内用于执行任务的runner，跟注册runner时的tag对应 |
+| [`tags`](https://docs.gitlab.com/ee/ci/yaml/README.html#tags) | 指定该项目可访问范围内用于执行任务的 runner，跟注册 runner时的tag对应 |
 | [`timeout`](https://docs.gitlab.com/ee/ci/yaml/README.html#timeout) | 设置一个任务的超时时间 |
 | [`trigger`](https://docs.gitlab.com/ee/ci/yaml/README.html#trigger) | 一个项目的流水线触发另一个项目的流水线执行 |
 | [`variables`](https://docs.gitlab.com/ee/ci/yaml/README.html#variables) | 定义变量 |
@@ -284,24 +284,24 @@ after_script:
 
 ## 5.1 场景
 
-实现产品拼夕夕（vue的PC端站点）在开发人员提交一个小功能到代码仓库后自动部署到测试服务器上，产品经理可以及时看到产品开发情况,开发人员也能及时发现集成的问题。
+实现产品拼夕夕（vue 的 PC 端站点）在开发人员提交一个小功能到代码仓库后自动部署到测试服务器上，产品经理可以及时看到产品开发情况,开发人员也能及时发现集成的问题。
 
 ## 5.2 环境准备
 
 ### 5.2.1 部署应用的测试服务器环境
 
 1. 这里使用一台 Windows server 2008 R2 Enterprise，服务器IP为 192.168.0.183，服务器用户名 weihu。
-1. 服务器web容器安装：这里使用nginx,nginx 静态资源目录为默认的D:\Product\test\nginx-1.18.0\html\，端口设置为 8104，在html目录下创建pinxx目录用于部署拼夕夕产品（服务器已有其他 web 容器也可以直接使用，比如node服务、tomcat等）
+1. 服务器 web 容器安装：这里使用nginx,nginx 静态资源目录为默认的D:\Product\test\nginx-1.18.0\html\，端口设置为 8104，在 html 目录下创建 pinxx 目录用于部署拼夕夕产品（服务器已有其他 web 容器也可以直接使用，比如 node 服务、tomcat 等）
 1. 安装服务器的OpenSSH并配置免密登录，参照以下文档配置：[https://www.yuque.com/docs/share/d3254cc2-2f11-4080-8af1-4b267b6c8235?#](https://www.yuque.com/docs/share/d3254cc2-2f11-4080-8af1-4b267b6c8235?#) 《Windows OpenSSH》
 
 **注：同一台服务器/ PC，只需要配置一次 OpenSSH，其他项目都可以基于此SSH进行远程配置**。
 
 ### 5.2.2 GitLab-Runner 安装
 
-1. 这里使用一台  Windows server 2012 R2 Standard,服务器IP为192.168.0.231，服务器用户名为 administrator。（也可以直接使用上边 183 的服务器进行安装，这里是为了演示通过 SSH 远程部署）
-1. 安装配置GitLab-Runner，参照以下文档配置：[https://www.yuque.com/docs/share/36b9f6ce-a9e2-47ff-ad4c-61a4b3f4256f?#](https://www.yuque.com/docs/share/36b9f6ce-a9e2-47ff-ad4c-61a4b3f4256f?#) 《GitLab-Runner 安装配置(windows)》
+1. 这里使用一台  Windows server 2012 R2 Standard,服务器 IP 为192.168.0.231，服务器用户名为 administrator。（也可以直接使用上边 183 的服务器进行安装，这里是为了演示通过 SSH 远程部署）
+1. 安装配置 GitLab-Runner，参照以下文档配置：[https://www.yuque.com/docs/share/36b9f6ce-a9e2-47ff-ad4c-61a4b3f4256f?#](https://www.yuque.com/docs/share/36b9f6ce-a9e2-47ff-ad4c-61a4b3f4256f?#) 《GitLab-Runner 安装配置(windows)》
 
-**注：一台安装了 GitLab-Runner 的服务器/PC 可以供多个项目使用，具有相同打包需求的项目，可以使用已有的GitLab-Runner**。
+**注：一台安装了 GitLab-Runner 的服务器/PC 可以供多个项目使用，具有相同打包需求的项目，可以使用已有的 GitLab-Runner**。
 
 ## 5.3 项目配置
 
@@ -396,4 +396,3 @@ after_script:
 3. 提交以上文件会自动触发流水线，可以切换到流水线页面查看流水线执行进度。
 
 ![流水线](流水线进度.png)
-
