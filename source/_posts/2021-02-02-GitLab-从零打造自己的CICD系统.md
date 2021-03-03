@@ -1,5 +1,5 @@
 ---
-title: GitLab-从零打造自己的CI/CD系统
+title: GitLab-从零打造自己的 CI/CD 系统
 author: 刘莹鑫
 authorLink: https://github.com/lyx383982759
 excerpt: 本文从基本概念到实践操作，一步一步教会您如何打造自己的CI/CD系统
@@ -133,11 +133,11 @@ GitLab Runner用于运行项目持续集成、持续部署脚本并将结果发�
 
 ![GitLab、GitLab CI 、GitLab-Runner关系](gitLab-runner.png)
 
-## 2.3 .gitlab-ci.yml
+## 2.4 .gitlab-ci.yml
 
 项目根目录下的一个文件，记录了一系列的阶段和执行规则。GitLab-CI 在检测到代码 push 后会解析它，根据里面的内容调用该项目可访问的 Runner 来运行。
 
-### 2.3.1 YAML 常用语法说明
+### 2.4.1 YAML 常用语法说明
 
 - 通过类似大纲的缩进方式组织层级（空格，不能使用跳格字符(TAB)）
 
@@ -184,7 +184,7 @@ variables:
 
 了解更多：[https://zh.wikipedia.org/wiki/YAML](https://zh.wikipedia.org/wiki/YAML)
 
-### 2.3.1相关概念
+### 2.4.2 相关概念
 
 ![相关概念](相关概念.png)
 
@@ -193,7 +193,7 @@ variables:
 
 - job（作业）：作业就是运行器(Runner)要执行的指令集合。当一个 Stage 执行的时候，与其关联的所有 Job 都会被执行。在有足够 Runner 的前提下,同一阶段的所有作业会并发执行。作业状态直接影响阶段的状态。
 
-### 2.3.2 常用配置（点击关键词有惊喜）
+### 2.4.3 常用配置（点击关键词有惊喜）
 
 | 关键词 | 描述 |
 | :--- | :--- |
@@ -280,15 +280,39 @@ after_script:
 
 ```
 
-# 5 快速上手
+## 2.5 通知
 
-## 5.1 场景
+通过设置通知您可以随时了解 GitLab 中发生了什么事情，比如可以设置通知获取 CI 构建结果。
+
+### 2.5.1 编辑通知
+
+![通知设置](通知设置.png)
+
+编辑通知设置：
+
+1. 点击个人资料图片，然后选择**设置** .
+2. 点击左侧边栏中的**通知** .
+3. 编辑所需的通知设置. 编辑的设置将自动保存并启用.
+
+**这些通知设置仅适用于您. 它们不会影响同一项目或组中其他任何人收到的通知。**
+
+### 2.5.2 通知设置示例
+
+需求：设置xxx项目只在构建失败后发送通知邮件。
+
+![自定义通知](自定义通知.png)
+
+[`了解更多`](https://www.bookstack.cn/read/gitlab-doc-zh/docs-410.md)
+
+# 3 快速上手
+
+## 3.1 场景
 
 实现产品拼夕夕（vue 的 PC 端站点）在开发人员提交一个小功能到代码仓库后自动部署到测试服务器上，产品经理可以及时看到产品开发情况,开发人员也能及时发现集成的问题。
 
-## 5.2 环境准备
+## 3.2 环境准备
 
-### 5.2.1 部署应用的测试服务器环境
+### 3.2.1 部署应用的测试服务器环境
 
 1. 这里使用一台 Windows server 2008 R2 Enterprise，服务器IP为 192.168.0.183，服务器用户名 weihu。
 1. 服务器 web 容器安装：这里使用nginx,nginx 静态资源目录为默认的D:\Product\test\nginx-1.18.0\html\，端口设置为 8104，在 html 目录下创建 pinxx 目录用于部署拼夕夕产品（服务器已有其他 web 容器也可以直接使用，比如 node 服务、tomcat 等）
@@ -296,14 +320,14 @@ after_script:
 
 **注：同一台服务器/ PC，只需要配置一次 OpenSSH，其他项目都可以基于此SSH进行远程配置**。
 
-### 5.2.2 GitLab-Runner 安装
+### 3.2.2 GitLab-Runner 安装
 
 1. 这里使用一台  Windows server 2012 R2 Standard,服务器 IP 为192.168.0.231，服务器用户名为 administrator。（也可以直接使用上边 183 的服务器进行安装，这里是为了演示通过 SSH 远程部署）
 1. 安装配置 GitLab-Runner，参照以下文档配置：[https://www.yuque.com/docs/share/36b9f6ce-a9e2-47ff-ad4c-61a4b3f4256f?#](https://www.yuque.com/docs/share/36b9f6ce-a9e2-47ff-ad4c-61a4b3f4256f?#) 《GitLab-Runner 安装配置(windows)》
 
 **注：一台安装了 GitLab-Runner 的服务器/PC 可以供多个项目使用，具有相同打包需求的项目，可以使用已有的 GitLab-Runner**。
 
-## 5.3 项目配置
+## 3.3 项目配置
 
 假设拼夕夕项目代码已经上传至代码仓库 GitLab，在“GitLab-Runner 安装”章节也已经为该项目注册了 tags 为“android、node、vue、ionic”的 GitLab-Runner。
 
