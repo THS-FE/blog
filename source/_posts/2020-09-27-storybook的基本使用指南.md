@@ -102,13 +102,13 @@ parameters: {
 ### 4.1.2 StoriesOf 方式
 
 ```js
-import {storiesOf} from '@storybook/vue';
-import TButton from '../components/t-button.vue';
-storiesOf('PC|统计图', module).add('柱图', () => ({
-  components: {TButton},
+import { storiesOf } from "@storybook/vue";
+import TButton from "../components/t-button.vue";
+storiesOf("PC|统计图", module).add("柱图", () => ({
+  components: { TButton },
   props: {
-    color: '#FF0000',
-    label: '确定',
+    color: "#FF0000",
+    label: "确定",
   },
   template: '<t-button :color="color" >{{label}}</t-button>',
 }));
@@ -123,13 +123,13 @@ storiesOf('PC|统计图', module).add('柱图', () => ({
 2. 以 addon-knobs 插件为例在 .storybook/main.js 中 module.exports 导出的对象中添加以下内容：
 
    ```js
-   addons: ['@storybook/addon-knobs'];
+   addons: ["@storybook/addon-knobs"];
    ```
 
 3. 在 story 中引用该插件就 OK 了：
 
    ```js
-   import {color, text, boolean} from '@storybook/addon-knobs';
+   import { color, text, boolean } from "@storybook/addon-knobs";
    ```
 
 ## 4.3 常用插件的使用
@@ -168,7 +168,7 @@ Notes 可以用于读取指定的 markdown 文档，展示组件的配置参数�
 使用方法：
 
 ```js
-import md from '../../static/mds/thsBarChart.md';
+import md from "../../static/mds/thsBarChart.md";
 export default {
   parameters: {
     notes: md,
@@ -197,8 +197,8 @@ export default {
 在 main.js 中：
 
 ```js
-import Vue from 'vue';
-import {thsBarChart} from 'ths-vue';
+import Vue from "vue";
+import { thsBarChart } from "ths-vue";
 Vue.use(thsBarChart);
 ```
 
@@ -219,53 +219,53 @@ export default {
   data() {
     return {
       basic: {
-        width: '100%',
-        height: '240',
-        backgroundColor: '#fff',
+        width: "100%",
+        height: "240",
+        backgroundColor: "#fff",
       },
       options: {
         color: [
-          '#538FFF',
-          '#FFBF27',
-          '#FC807A',
-          '#7BD25F',
-          '#BE90EA',
-          '#FF9F37',
+          "#538FFF",
+          "#FFBF27",
+          "#FC807A",
+          "#7BD25F",
+          "#BE90EA",
+          "#FF9F37",
         ],
         tooltip: {
           show: true,
-          backgroundColor: '#fff',
+          backgroundColor: "#fff",
           textStyle: {
-            color: '#333',
-            fontSize: '12',
-            fontFamily: 'PF',
-            fontWeight: 'normal',
+            color: "#333",
+            fontSize: "12",
+            fontFamily: "PF",
+            fontWeight: "normal",
           },
         },
         title: {
           show: false,
-          text: '这是标题',
+          text: "这是标题",
           textStyle: {
-            color: '#666',
-            fontSize: '16',
-            fontFamily: 'PF',
-            fontWeight: 'bold',
+            color: "#666",
+            fontSize: "16",
+            fontFamily: "PF",
+            fontWeight: "bold",
           },
-          left: 'center',
+          left: "center",
         },
         legend: {
           padding: [0, 0, 0, 50],
           show: true,
-          left: 'center',
+          left: "center",
           top: 20,
-          orient: 'horizontal',
+          orient: "horizontal",
           textStyle: {
-            color: '#666',
-            fontSize: '12',
-            fontFamily: 'PF',
-            fontWeight: 'normal',
+            color: "#666",
+            fontSize: "12",
+            fontFamily: "PF",
+            fontWeight: "normal",
           },
-          data: ['示例', '示例2'],
+          data: ["示例", "示例2"],
         },
         grid: {
           left: 40,
@@ -275,21 +275,21 @@ export default {
         },
         xAxis: {
           show: true,
-          name: '',
+          name: "",
           nameTextStyle: {
-            color: '#666',
-            fontSize: '12',
-            fontFamily: 'PF',
-            fontWeight: 'normal',
+            color: "#666",
+            fontSize: "12",
+            fontFamily: "PF",
+            fontWeight: "normal",
           },
           nameGap: 10,
           boundaryGap: true,
           axisLine: {
             show: true,
             lineStyle: {
-              color: '#eee',
+              color: "#eee",
               width: 1,
-              type: 'solid',
+              type: "solid",
             },
           },
           axisTick: {
@@ -298,29 +298,29 @@ export default {
           splitLine: {
             show: false,
             lineStyle: {
-              color: '#eee',
+              color: "#eee",
               width: 1,
-              type: 'solid',
+              type: "solid",
             },
           },
           axisLabel: {
             show: true,
             interval: 0,
-            color: '#666',
+            color: "#666",
             rotate: 0,
-            fontFamily: 'PF',
-            fontSize: '12',
+            fontFamily: "PF",
+            fontSize: "12",
           },
-          data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+          data: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
         },
         yAxis: {
           show: true,
-          name: '单位',
+          name: "单位",
           nameTextStyle: {
-            color: '#666',
-            fontSize: '12',
-            fontFamily: 'PF',
-            fontWeight: 'normal',
+            color: "#666",
+            fontSize: "12",
+            fontFamily: "PF",
+            fontWeight: "normal",
           },
           nameGap: 10,
           inverse: false,
@@ -329,9 +329,9 @@ export default {
           axisLine: {
             show: true,
             lineStyle: {
-              color: '#eee',
+              color: "#eee",
               width: 1,
-              type: 'solid',
+              type: "solid",
             },
           },
           axisTick: {
@@ -340,71 +340,71 @@ export default {
           splitLine: {
             show: true,
             lineStyle: {
-              color: '#eee',
+              color: "#eee",
               width: 1,
-              type: 'dashed',
+              type: "dashed",
             },
           },
           axisLabel: {
             show: true,
             interval: 0,
-            color: '#666',
+            color: "#666",
             rotate: 0,
-            fontFamily: 'PF',
-            fontSize: '12',
+            fontFamily: "PF",
+            fontSize: "12",
           },
         },
         series: [
           {
-            name: '示例',
+            name: "示例",
             label: {
               show: false,
-              position: 'top',
+              position: "top",
               distance: 5,
-              color: '#666',
-              fontFamily: 'PF',
-              fontSize: '12',
+              color: "#666",
+              fontFamily: "PF",
+              fontSize: "12",
             },
-            barColor: '',
+            barColor: "",
             barWidth: 4,
-            borderColor: 'rgba(0,0,0,0)',
+            borderColor: "rgba(0,0,0,0)",
             borderWidth: 2,
-            backgroundColor: '',
+            backgroundColor: "",
             data: [120, 132, 101, 134, 90, 230, 210],
-            stack: '示例2',
+            stack: "示例2",
           },
           {
-            name: '示例2',
+            name: "示例2",
             label: {
               show: false,
-              position: 'top',
+              position: "top",
               distance: 5,
-              color: '#666',
-              fontFamily: 'PF',
-              fontSize: '12',
+              color: "#666",
+              fontFamily: "PF",
+              fontSize: "12",
             },
-            barColor: '',
+            barColor: "",
             barWidth: 4,
-            borderColor: 'rgba(0,0,0,0)',
+            borderColor: "rgba(0,0,0,0)",
             borderWidth: 2,
-            backgroundColor: '',
+            backgroundColor: "",
             data: [12, 13, 10, 13, 9, 23, 21],
           },
           {
-            name: '示例3',
+            name: "示例3",
             label: {
               show: false,
-              position: 'top',
+              position: "top",
               distance: 5,
-              color: '#666',
-              fontFamily: 'PF',
-              fontSize: '12',
+              color: "#666",
+              fontFamily: "PF",
+              fontSize: "12",
             },
-            barColor: '',
+            barColor: "",
             barWidth: 4,
-            borderColor: 'rgba(0,0,0,0)',
+            borderColor: "rgba(0,0,0,0)",
             borderWidth: 2,
-            backgroundColor: '',
+            backgroundColor: "",
             data: [122, 13, 10, 13, 9, 23, 21],
           },
         ],
@@ -413,16 +413,16 @@ export default {
           maxPointNum: 10,
         },
       },
-      nameAlias: 'date',
-      valueAlias: 'revenue',
+      nameAlias: "date",
+      valueAlias: "revenue",
       data: [
-        {date: '星期一', revenue: 43},
-        {date: '星期二', revenue: 54},
-        {date: '星期三', revenue: 82},
-        {date: '星期四', revenue: 48},
-        {date: '星期五', revenue: 10},
-        {date: '星期六', revenue: 82},
-        {date: '星期天', revenue: 28},
+        { date: "星期一", revenue: 43 },
+        { date: "星期二", revenue: 54 },
+        { date: "星期三", revenue: 82 },
+        { date: "星期四", revenue: 48 },
+        { date: "星期五", revenue: 10 },
+        { date: "星期六", revenue: 82 },
+        { date: "星期天", revenue: 28 },
       ],
     };
   },

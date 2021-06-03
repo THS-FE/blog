@@ -18,125 +18,121 @@ date: 2020-05-24 18:11:11
 
 ## 1.1 类
 
-使用PascalCase进行命名。
+使用 PascalCase 进行命名。
 
-***Bad***
+**_Bad_**
 
 ```typescript
-class foo { }
+class foo {}
 ```
 
-***Good***
+**_Good_**
 
 ```typescript
-class Foo { }
+class Foo {}
 ```
 
 ## 1.2 类成员（变量、方法）
 
-使用camelCase进行命名。
+使用 camelCase 进行命名。
 
-***Bad***
+**_Bad_**
 
 ```typescript
 class Foo {
-    Bar: number;
-    Baz(): number { }
+  Bar: number;
+  Baz(): number {}
 }
 ```
 
-***Good***
+**_Good_**
 
 ```typescript
 class Foo {
-    bar: number;
-    baz(): number { }
+  bar: number;
+  baz(): number {}
 }
 ```
 
 ## 1.3 接口
 
-使用PascalCase进行命名，不要在接口名前加“I”。
+使用 PascalCase 进行命名，不要在接口名前加“I”。
 
-接口成员使用camelCase进行命名。
+接口成员使用 camelCase 进行命名。
 
-***Bad***
+**_Bad_**
 
 ```typescript
 interface IFoo {
   Bar: number;
-  Baz(): number;
+  Baz(): number;
 }
 ```
 
-***Good***
+**_Good_**
 
 ```typescript
 interface Foo {
-  bar: number;
-  baz(): number;
+  bar: number;
+  baz(): number;
 }
 ```
 
 ## 1.4 命名空间
 
-使用PascalCase进行命名。
+使用 PascalCase 进行命名。
 
-***Bad***
+**_Bad_**
 
 ```typescript
-namespace foo {
-}
+namespace foo {}
 ```
 
-***Good***
+**_Good_**
 
 ```typescript
-namespace Foo {
-}
+namespace Foo {}
 ```
 
 ## 1.5 枚举
 
-- 使用PascalCase进行命名。
+- 使用 PascalCase 进行命名。
 
-  ***Bad***
-
-  ```typescript
-  enum color {
-  }
-  ```
-
-  ***Good***
+  **_Bad_**
 
   ```typescript
-  enum Color {
-  }
+  enum color {}
   ```
 
-- 枚举成员使用PascalCase进行命名。
+  **_Good_**
 
-  ***Bad***
+  ```typescript
+  enum Color {}
+  ```
+
+- 枚举成员使用 PascalCase 进行命名。
+
+  **_Bad_**
 
   ```typescript
   enum Color {
-      red
+    red,
   }
   ```
 
-  ***Good***
+  **_Good_**
 
   ```typescript
   enum Color {
-      Red
+    Red,
   }
   ```
-  
+
 ## 1.6 文件名
 
 - 使用破折号分隔描述性单词，比如：hero-list.ts。
 - 使用点将描述性名称与类型分开，比如：user-info.page.ts。
-- 尽量使用常规的几种类型名，包括.page,.service,.component,.pipe,.module,.directive,.controller和.middleware。当然也可以自己创建其他类型，但不宜太多。
+- 尽量使用常规的几种类型名，包括.page,.service,.component,.pipe,.module,.directive,.controller 和.middleware。当然也可以自己创建其他类型，但不宜太多。
 - 类名与文件名匹配，并遵循类命名规范。
 
 | 类名                                | 文件名                  |
@@ -149,93 +145,92 @@ namespace Foo {
 
 - 需显式地为变量、数组和方法编写类型（类型推论能够推断出类型的不需要声明类型）。
 
-  ***Bad***
+  **_Bad_**
 
   ```typescript
   class Bar {
-   bar(input) {
-    let isZero;
-    const foo: number = 5;
-    if(input===5){
-     isZero=false;
+    bar(input) {
+      let isZero;
+      const foo: number = 5;
+      if (input === 5) {
+        isZero = false;
+      }
+      const resultObject = {
+        fo: foo,
+        isZeroRes: isZero,
+      };
+      return resultObject;
     }
-     const resultObject = {
-      fo: foo,
-      isZeroRes: isZero
-    };
-    return resultObject;
-   }
   }
   ```
 
-  ***Good***
+  **_Good_**
 
   ```typescript
   class Bar {
-   bar(input: number): BarResult {
-      let isZero: boolean;
-      const foo = 5;
-      if (input === 0) {
-       isZero = true;
-      }
-      const resultObject = {
-        fo: foo,
-        isZeroRes: isZero
-        };
-      return resultObject;
-    }
+    bar(input: number): BarResult {
+      let isZero: boolean;
+      const foo = 5;
+      if (input === 0) {
+        isZero = true;
+      }
+      const resultObject = {
+        fo: foo,
+        isZeroRes: isZero,
+      };
+      return resultObject;
+    }
   }
-  
-  interface BarResult {
-    fo: number;
-    isZeroRes: boolean;
+
+  interface BarResult {
+    fo: number;
+    isZeroRes: boolean;
   }
   ```
 
-- 不要使用Number、String、Boolean、Object为变量、数组和方法设置类型。
+- 不要使用 Number、String、Boolean、Object 为变量、数组和方法设置类型。
 
-  ***Bad***
+  **_Bad_**
 
   ```typescript
   baz(foo: String): String {
-  
+
   }
   ```
 
-  ***Good***
+  **_Good_**
 
   ```typescript
   baz(foo: string): string {
-  
+
   }
   ```
 
 # 3 声明变量
 
-- 如果变量在其生命周期可能发生改变，尽量使用let。
+- 如果变量在其生命周期可能发生改变，尽量使用 let。
 
-- 如果一个值在程序生命周期内不会改变，尽量使用const。
+- 如果一个值在程序生命周期内不会改变，尽量使用 const。
 
-  ***Bad***
+  **_Bad_**
 
   ```typescript
-  var bar = 'bar';
+  var bar = "bar";
   var count;
   if (true) {
     console.log(bar);
-    count += 1
+    count += 1;
   }
-
   ```
 
-  ***Good***
-  
+  **_Good_**
+
   ```typescript
-  const bar = 'bar';
-  let count: number;
-  if (true) {
-    console.log(bar);
-    count += 1;
+  const bar = "bar";
+  let count: number;
+  if (true) {
+    console.log(bar);
+    count += 1;
   }
   ```
 
@@ -243,33 +238,33 @@ namespace Foo {
 
 - 使用{}进行对象创建。
 
-  ***Bad***
+  **_Bad_**
 
   ```typescript
   const  item  =  new  Object（）;
   ```
 
-  ***Good***
+  **_Good_**
 
   ```typescript
-  const  item  = {};
+  const item = {};
   ```
 
 - 在对象字面量里使用属性简写。
 
-  ***Bad***
+  **_Bad_**
 
   ```typescript
-  const lukeSkywalker = 'Luke Skywalker';
+  const lukeSkywalker = "Luke Skywalker";
   const obj = {
     lukeSkywalker: lukeSkywalker,
   };
   ```
 
-  ***Good***
+  **_Good_**
 
   ```typescript
-  const lukeSkywalker = 'Luke Skywalker';
+  const lukeSkywalker = "Luke Skywalker";
   const obj = {
     lukeSkywalker,
   };
@@ -277,37 +272,37 @@ namespace Foo {
 
 - 仅使用引号用于属于无效标识符的属性。
 
-  ***Bad***
+  **_Bad_**
 
   ```typescript
-  const bad = {
-        'foo': 3,
-        'bar': 4,
-        'data-blah': 5,
-      };
+  const bad = {
+    foo: 3,
+    bar: 4,
+    "data-blah": 5,
+  };
   ```
 
-  ***Good***
+  **_Good_**
 
   ```typescript
-  const good = {
-        foo: 3,
-        bar: 4,
-        'data-blah': 5,
-      };
+  const good = {
+    foo: 3,
+    bar: 4,
+    "data-blah": 5,
+  };
   ```
 
 # 5 字符串
 
 - 使用单引号声明字符串。
 
-  ***Bad***
+  **_Bad_**
 
   ```typescript
   const bar = "bar";
   ```
 
-  ***Good***
+  **_Good_**
 
   ```typescript
   const bar = 'bar'；
@@ -317,14 +312,14 @@ namespace Foo {
 
 - 访问和使用对象的多个属性时，使用对象解构。
 
-  ***Bad***
+  **_Bad_**
 
   ```typescript
   const foo = user.firstName;
   const bar = user.lastName;
   ```
 
-  ***Good***
+  **_Good_**
 
   ```typescript
   const { foo, bar } = user;
@@ -332,7 +327,7 @@ namespace Foo {
 
 - 访问数组中的多个数据时，使用解构。
 
-  ***Bad***
+  **_Bad_**
 
   ```typescript
   const arr = [1, 2, 3, 4];
@@ -340,7 +335,7 @@ namespace Foo {
   const second = arr[1];
   ```
 
-  ***Good***
+  **_Good_**
 
   ```typescript
   const arr = [1, 2, 3, 4];
@@ -354,33 +349,33 @@ namespace Foo {
 - 方法、类大括号前空格。
 - 对象冒号后空格。
 
-***Bad***
-
-```typescript
-class Foo{
- openDetail(item:string):void{
-    let foo:string;
-    foo='';
-    const foa={
-      name:'foo'
-    };
-    console.log(item);
- }
-}
-```
-
-***Good***
+**_Bad_**
 
 ```typescript
 class Foo {
- openDetail(item: string): void {
-    let foo: string;
-    foo = '';
-    const foa = {
-      name: 'foo'
-    };
-    console.log(item);
- }
+  openDetail(item: string): void {
+    let foo: string;
+    foo = "";
+    const foa = {
+      name: "foo",
+    };
+    console.log(item);
+  }
+}
+```
+
+**_Good_**
+
+```typescript
+class Foo {
+  openDetail(item: string): void {
+    let foo: string;
+    foo = "";
+    const foa = {
+      name: "foo",
+    };
+    console.log(item);
+  }
 }
 ```
 
@@ -392,46 +387,46 @@ class Foo {
 
 语句结尾添加分号。
 
-***Bad***
+**_Bad_**
 
 ```typescript
-const foo = 'foo'
+const foo = "foo";
 ```
 
-***Good***
+**_Good_**
 
 ```typescript
-const foo = 'foo';
+const foo = "foo";
 ```
 
 # 10 数组
 
 - 使用[]定义数组。
 
-  ***Bad***
+  **_Bad_**
 
   ```typescript
-  let foos:Array<Foo>;
+  let foos: Array<Foo>;
   ```
 
-  ***Good***
+  **_Good_**
 
   ```typescript
-  let foos:Foo[];
+  let foos: Foo[];
   ```
 
-- 使用push添加数据
+- 使用 push 添加数据
 
-  ***Bad***
+  **_Bad_**
 
   ```typescript
   const foos = [];
-  foos[foos.length] = 'abracadabra';
+  foos[foos.length] = "abracadabra";
   ```
 
-  ***Good***
+  **_Good_**
 
   ```typescript
   const foos = [];
-  foos.push('abracadabra');
+  foos.push("abracadabra");
   ```
